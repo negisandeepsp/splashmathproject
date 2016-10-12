@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="C:/Users/STUDYPAD/workspace/ProjectSplashmath/lib/extentreports-2.05.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STUDYPAD/workspace/ProjectSplashmath/lib/jcommander-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STUDYPAD/workspace/ProjectSplashmath/lib/selenium-server-standalone-3.0.0-beta4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/STUDYPAD/workspace/ProjectSplashmath/lib/testng-6.9.9.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
