@@ -17,7 +17,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-import screenShot.SplashmathScreenShot;
+import commonUtility.SplashmathScreenShot;
 
 public class Base 
 {

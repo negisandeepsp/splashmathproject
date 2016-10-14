@@ -34,8 +34,6 @@ public class ParentSignUp
 		{
 			driver.findElement(ParentSignUpButton).click();
 			System.out.println("Parent SignUp Button Clicked");
-			WebDriverWait signUpButton= new WebDriverWait(driver,20);
-			signUpButton.until(ExpectedConditions.elementToBeClickable(driver.findElement(doSignUpButton)));
 
 		}
 		
@@ -50,8 +48,7 @@ public class ParentSignUp
 		{
 			driver.findElement(userEmail).sendKeys(email);
 			System.out.println("User Email field Present");
-			WebDriverWait signUpButton= new WebDriverWait(driver,20);
-			signUpButton.until(ExpectedConditions.elementToBeClickable(driver.findElement(doSignUpButton)));
+	
 
 		}
 		
@@ -66,8 +63,7 @@ public class ParentSignUp
 		
 			driver.findElement(userPassword).sendKeys(password);
 			System.out.println("User Password field Present");
-			WebDriverWait signUpButton= new WebDriverWait(driver,20);
-			signUpButton.until(ExpectedConditions.elementToBeClickable(driver.findElement(doSignUpButton)));
+			
 		}
 		
 		else
@@ -80,8 +76,6 @@ public class ParentSignUp
 		{
 			driver.findElement(doSignUpButton).click();
 			System.out.println("Parent DoSignUp Button Present");
-			WebDriverWait signUpButton= new WebDriverWait(driver,20);
-			signUpButton.until(ExpectedConditions.elementToBeClickable(driver.findElement(doSignUpButton)));
 		}
 		
 		else
@@ -90,4 +84,5 @@ public class ParentSignUp
 		}
 		
 	}
+	
 }

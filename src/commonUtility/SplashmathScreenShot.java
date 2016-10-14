@@ -1,4 +1,4 @@
-package screenShot;
+package commonUtility;
 
 import java.io.File;
 
