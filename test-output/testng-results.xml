@@ -1,29 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="15" passed="15">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="27475" started-at="2016-10-14T11:49:52Z" finished-at="2016-10-14T11:50:19Z">
+  <suite name="Suite" duration-ms="407430" started-at="2016-10-17T06:57:35Z" finished-at="2016-10-17T07:04:22Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="27475" started-at="2016-10-14T11:49:52Z" finished-at="2016-10-14T11:50:19Z">
+    <test name="Test" duration-ms="407430" started-at="2016-10-17T06:57:35Z" finished-at="2016-10-17T07:04:22Z">
       <class name="testCases.LandingPageParentSignUp">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testCases.LandingPageParentSignUp@1f70c54]" name="beforeSuite" is-config="true" duration-ms="93" started-at="2016-10-14T17:19:52Z" finished-at="2016-10-14T17:19:52Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="beforeSuite" is-config="true" duration-ms="68" started-at="2016-10-17T12:27:35Z" finished-at="2016-10-17T12:27:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@1f70c54]" name="openBrowser" is-config="true" duration-ms="20601" started-at="2016-10-14T17:19:52Z" finished-at="2016-10-14T17:20:13Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="10231" started-at="2016-10-17T12:27:35Z" finished-at="2016-10-17T12:27:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="verifyLinkPrivacyPolicy()[pri:0, instance:testCases.LandingPageParentSignUp@1f70c54]" name="verifyLinkPrivacyPolicy" duration-ms="5195" started-at="2016-10-14T17:20:13Z" finished-at="2016-10-14T17:20:18Z">
+        <test-method status="PASS" signature="enterBlankCredentials()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterBlankCredentials" duration-ms="2252" started-at="2016-10-17T12:27:45Z" finished-at="2016-10-17T12:27:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLinkPrivacyPolicy -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@1f70c54]" name="closeBrowser" is-config="true" duration-ms="1652" started-at="2016-10-14T17:20:18Z" finished-at="2016-10-14T17:20:19Z">
+        </test-method> <!-- enterBlankCredentials -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="948" started-at="2016-10-17T12:27:48Z" finished-at="2016-10-17T12:27:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="FAIL" signature="afterSuite()[pri:0, instance:testCases.LandingPageParentSignUp@1f70c54]" name="afterSuite" is-config="true" duration-ms="0" started-at="2016-10-14T17:20:20Z" finished-at="2016-10-14T17:20:20Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="8390" started-at="2016-10-17T12:27:48Z" finished-at="2016-10-17T12:27:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="enterBlankUserEmail()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterBlankUserEmail" duration-ms="1825" started-at="2016-10-17T12:27:57Z" finished-at="2016-10-17T12:27:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterBlankUserEmail -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="832" started-at="2016-10-17T12:27:59Z" finished-at="2016-10-17T12:28:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="7992" started-at="2016-10-17T12:28:00Z" finished-at="2016-10-17T12:28:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="enterBlankUserPassword()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterBlankUserPassword" duration-ms="1912" started-at="2016-10-17T12:28:08Z" finished-at="2016-10-17T12:28:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterBlankUserPassword -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="833" started-at="2016-10-17T12:28:09Z" finished-at="2016-10-17T12:28:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="7837" started-at="2016-10-17T12:28:10Z" finished-at="2016-10-17T12:28:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="enterInvalidCredentials()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterInvalidCredentials" duration-ms="1967" started-at="2016-10-17T12:28:18Z" finished-at="2016-10-17T12:28:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterInvalidCredentials -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="821" started-at="2016-10-17T12:28:20Z" finished-at="2016-10-17T12:28:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="8661" started-at="2016-10-17T12:28:21Z" finished-at="2016-10-17T12:28:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="enterInvalidEmailFormatTypeOne()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterInvalidEmailFormatTypeOne" duration-ms="2214" started-at="2016-10-17T12:28:30Z" finished-at="2016-10-17T12:28:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterInvalidEmailFormatTypeOne -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="1098" started-at="2016-10-17T12:28:32Z" finished-at="2016-10-17T12:28:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="8713" started-at="2016-10-17T12:28:33Z" finished-at="2016-10-17T12:28:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="enterInvalidEmailFormatTypeThree()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterInvalidEmailFormatTypeThree" duration-ms="2004" started-at="2016-10-17T12:28:42Z" finished-at="2016-10-17T12:28:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterInvalidEmailFormatTypeThree -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="941" started-at="2016-10-17T12:28:44Z" finished-at="2016-10-17T12:28:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="8684" started-at="2016-10-17T12:28:45Z" finished-at="2016-10-17T12:28:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="enterInvalidEmailFormatTypeTwo()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterInvalidEmailFormatTypeTwo" duration-ms="2115" started-at="2016-10-17T12:28:53Z" finished-at="2016-10-17T12:28:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterInvalidEmailFormatTypeTwo -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="826" started-at="2016-10-17T12:28:55Z" finished-at="2016-10-17T12:28:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="11850" started-at="2016-10-17T12:28:56Z" finished-at="2016-10-17T12:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="enterUserPassword_InvalidPasswordLength()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterUserPassword_InvalidPasswordLength" duration-ms="1936" started-at="2016-10-17T12:29:08Z" finished-at="2016-10-17T12:29:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterUserPassword_InvalidPasswordLength -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="868" started-at="2016-10-17T12:29:10Z" finished-at="2016-10-17T12:29:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="9480" started-at="2016-10-17T12:29:11Z" finished-at="2016-10-17T12:29:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="validSignUpTypeOne_usingSmallCharaters()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="validSignUpTypeOne_usingSmallCharaters" duration-ms="5284" started-at="2016-10-17T12:29:20Z" finished-at="2016-10-17T12:29:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validSignUpTypeOne_usingSmallCharaters -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="831" started-at="2016-10-17T12:29:26Z" finished-at="2016-10-17T12:29:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="9327" started-at="2016-10-17T12:29:26Z" finished-at="2016-10-17T12:29:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="validSignUpTypeTwo_usingCapitalCharaters()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="validSignUpTypeTwo_usingCapitalCharaters" duration-ms="4586" started-at="2016-10-17T12:29:36Z" finished-at="2016-10-17T12:29:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validSignUpTypeTwo_usingCapitalCharaters -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="875" started-at="2016-10-17T12:29:40Z" finished-at="2016-10-17T12:29:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="8904" started-at="2016-10-17T12:29:41Z" finished-at="2016-10-17T12:29:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyAlreadySignUpUserEmailAccount()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="verifyAlreadySignUpUserEmailAccount" duration-ms="6840" started-at="2016-10-17T12:29:50Z" finished-at="2016-10-17T12:29:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAlreadySignUpUserEmailAccount -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="788" started-at="2016-10-17T12:29:57Z" finished-at="2016-10-17T12:29:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="10263" started-at="2016-10-17T12:29:58Z" finished-at="2016-10-17T12:30:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyFacebookSignUp()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="verifyFacebookSignUp" duration-ms="3743" started-at="2016-10-17T12:30:08Z" finished-at="2016-10-17T12:30:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFacebookSignUp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="839" started-at="2016-10-17T12:30:12Z" finished-at="2016-10-17T12:30:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="222530" started-at="2016-10-17T12:30:13Z" finished-at="2016-10-17T12:33:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyGoogleSignUp()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="verifyGoogleSignUp" duration-ms="24" started-at="2016-10-17T12:33:55Z" finished-at="2016-10-17T12:33:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGoogleSignUp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="846" started-at="2016-10-17T12:33:55Z" finished-at="2016-10-17T12:33:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="7728" started-at="2016-10-17T12:33:56Z" finished-at="2016-10-17T12:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyLinkPrivacyPolicy()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="verifyLinkPrivacyPolicy" duration-ms="3565" started-at="2016-10-17T12:34:04Z" finished-at="2016-10-17T12:34:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLinkPrivacyPolicy -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="852" started-at="2016-10-17T12:34:07Z" finished-at="2016-10-17T12:34:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="10034" started-at="2016-10-17T12:34:08Z" finished-at="2016-10-17T12:34:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyLinkTerms()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="verifyLinkTerms" duration-ms="3468" started-at="2016-10-17T12:34:18Z" finished-at="2016-10-17T12:34:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLinkTerms -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="823" started-at="2016-10-17T12:34:22Z" finished-at="2016-10-17T12:34:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="FAIL" signature="afterSuite()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="afterSuite" is-config="true" duration-ms="0" started-at="2016-10-17T12:34:23Z" finished-at="2016-10-17T12:34:23Z">
           <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
               <![CDATA[Session ID is null. Using WebDriver after calling quit()?

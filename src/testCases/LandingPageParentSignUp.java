@@ -35,6 +35,17 @@ public class LandingPageParentSignUp extends Base
 	private By ParentSignUpButton= By.linkText("Parents, Get Started for Free");
 	private By linkTerms = By.xpath("//div[@class='terms']/p/small/a[1]");
 	private By linkPrivacyPolicy=By.xpath("//div[@class='terms']/p/small/a[2]");
+	private By googleSignUp = By.xpath("//div[@class='social-signups']/a[1]");
+	private By facebookSignUp = By.xpath("//div[@class='social-signups']/a[2]");
+	
+	// On Google Page
+	private By googleUserEmail = By.id("Email");
+	private By googleNextButton = By.id("next");
+	private By googleUserPassword = By.id("Passwd");
+	private By googleSignInButton = By.id("signIn");
+	
+	// On facebook Page
+	private By facebookPageLoginButton = By.name("login");
 	
 	ParentSignUp signUp;
 	SplashmathScreenShot images;
@@ -696,5 +707,168 @@ public class LandingPageParentSignUp extends Base
 	}
 	
 	
+	@Test
+	public void verifyGoogleSignUp()
+	{
+		boolean elementStatus = false;
+
+		try
+		{
+			findElement = new VerifyElementOnWebPage(driver);
+			test = extent.startTest("Verify ParentSignUpForm_GoogleSignUp");
+			images = new SplashmathScreenShot(driver);
+			
+			elementStatus=findElement.isElementPresent(ParentSignUpButton);
+			if(elementStatus)
+			{
+				driver.findElement(ParentSignUpButton).click();
+				test.log(LogStatus.INFO, "Clicked on Parent SignUP button on Landing Page");
+			    
+				WebDriverWait signUpButton= new WebDriverWait(driver,20);
+				signUpButton.until(ExpectedConditions.elementToBeClickable(driver.findElement(doSignUpButton)));
+				
+				//googleSignUp
+				elementStatus=findElement.isElementPresent(googleSignUp);
+				if(elementStatus)
+				{
+					test.log(LogStatus.INFO, "Google SignUp Button present on page");
+					driver.findElement(googleSignUp).click();
+					test.log(LogStatus.INFO, "Cliked on Google SignUp button");
+					// Google Title = "Sign in - Google Accounts"
+					// Already SignUp user = omnitest100@gmail.com
+					
+		// To check whether User lands on Google Page or not			
+							if(driver.getTitle().contains("Sign in - Google Accounts"))
+										{
+											WebDriverWait googlePage=new WebDriverWait(driver,20);
+											googlePage.until(ExpectedConditions.elementToBeClickable(googleNextButton));
+											test.log(LogStatus.INFO, "On Google SignUp Page");
+											images.takeScreenshot("LandingPage_ParentSignUP", "Google_SignUp_Page");
+											
+											driver.findElement(googleUserEmail).sendKeys("omnitest90@gmail.com");
+											driver.findElement(googleNextButton).click();
+											driver.findElement(googleUserPassword).sendKeys("splashmath");
+											driver.findElement(googleSignInButton).click();
+											Thread.sleep(2000);
+									// User may have already Signed up using Existing Credential, this we will check using Page Title	
+											if(driver.getTitle().contains("Parent"))
+											{
+												test.log(LogStatus.INFO,"Page After Google SignUp = " + driver.getTitle());
+												test.log(LogStatus.INFO, "URL =" + driver.getCurrentUrl());
+												images.takeScreenshot("LandingPage_ParentSignUP", "Parent SignUp via Google");
+												test.log(LogStatus.PASS, "Google SignUp Page verified");
+											}
+											
+											else
+											{
+												test.log(LogStatus.INFO,"User already SignUp as an Teacher using existing Credential, use different Credentials");
+												test.log(LogStatus.INFO, "URL =" + driver.getCurrentUrl());
+												images.takeScreenshot("LandingPage_ParentSignUP", "Teacher SignUp via Google");
+												test.log(LogStatus.PASS, "Google SignUp Page verified");
+											}
+								// Page title checked			
+										}
+							
+							else
+							{
+								String currentPage=driver.getTitle();
+								test.log(LogStatus.INFO, "User on Page " + currentPage);
+								test.log(LogStatus.INFO, "URL =" + driver.getCurrentUrl());
+								images.takeScreenshot("LandingPage_ParentSignUP", currentPage);
+							}
+					
+				}
+				else
+				{
+					test.log(LogStatus.INFO, "Google SignUp Button not Present or is missing");
+				}
+				
+			}
+			
+			else
+			{
+				test.log(LogStatus.INFO, "Parent SignUp button not present");
+			}
+			
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+	}
 	
+	
+	@Test
+	public void verifyFacebookSignUp()
+	{
+		boolean elementStatus = false;
+		try
+		{
+			findElement = new VerifyElementOnWebPage(driver);
+			test = extent.startTest("Verify ParentSignUpForm_FacebookSignUp");
+			images = new SplashmathScreenShot(driver);
+			
+			elementStatus=findElement.isElementPresent(ParentSignUpButton);
+			if(elementStatus)
+			{
+			test.log(LogStatus.INFO, "ParentSignUpButton present on page");
+			driver.findElement(ParentSignUpButton).click();
+			test.log(LogStatus.INFO, "Clicked on ParentSignUpButton");
+			
+			WebDriverWait signUpButton= new WebDriverWait(driver,20);
+			signUpButton.until(ExpectedConditions.elementToBeClickable(driver.findElement(doSignUpButton)));
+			
+			elementStatus=findElement.isElementPresent(facebookSignUp);
+			if(elementStatus)
+				{
+					test.log(LogStatus.INFO, "Facebook SignUp Button present on page");
+					driver.findElement(facebookSignUp).click();
+					test.log(LogStatus.INFO, "Clicked on Facebook Button");
+				if(driver.getTitle().contains("Facebook"))
+				{
+						elementStatus=findElement.isElementPresent(facebookPageLoginButton);
+				
+						if(elementStatus)
+						{
+							test.log(LogStatus.INFO, "User on FacebookPage");
+							test.log(LogStatus.INFO, "URL = " +driver.getCurrentUrl());
+							test.log(LogStatus.PASS, "Verfied Facebook SignUp");
+							images.takeScreenshot("LandingPage_ParentSignUP", "FacebookPage");
+						}
+						else
+						{
+							test.log(LogStatus.INFO, "URL = " +driver.getCurrentUrl());
+							test.log(LogStatus.FAIL, "Something Wrong on this Page");
+							images.takeScreenshot("LandingPage_ParentSignUP", "SomethingWrongOnFacebookPage");
+						}
+					
+				}
+				
+				else
+				{
+					test.log(LogStatus.INFO, "User not on Facebook Page");
+					test.log(LogStatus.INFO, "URL = " +driver.getCurrentUrl());
+					images.takeScreenshot("LandingPage_ParentSignUP", "Incorrect FacebookPage");
+				}
+			}
+			
+			else
+			{
+				test.log(LogStatus.INFO, "Facebook Button Not present on Page");
+				images.takeScreenshot("LandingPage_ParentSignUP", "Facebook Button missing on Page");
+				
+			}
+			}
+			
+			else
+			{
+				test.log(LogStatus.INFO, "Parent SignUp Button not present on page");
+			}
+			
+		}
+		catch(Exception e)
+		{
+			test.log(LogStatus.INFO, e.getMessage());
+		}
+	}
 }
