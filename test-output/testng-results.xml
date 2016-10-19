@@ -1,239 +1,382 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="15" passed="15">
+<testng-results skipped="0" failed="0" total="19" passed="19">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="407430" started-at="2016-10-17T06:57:35Z" finished-at="2016-10-17T07:04:22Z">
+  <suite name="Suite" duration-ms="535646" started-at="2016-10-19T12:41:34Z" finished-at="2016-10-19T12:50:30Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="407430" started-at="2016-10-17T06:57:35Z" finished-at="2016-10-17T07:04:22Z">
-      <class name="testCases.LandingPageParentSignUp">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="beforeSuite" is-config="true" duration-ms="68" started-at="2016-10-17T12:27:35Z" finished-at="2016-10-17T12:27:35Z">
+    <test name="Test" duration-ms="535646" started-at="2016-10-19T12:41:34Z" finished-at="2016-10-19T12:50:30Z">
+      <class name="testCases.LandingPageTestCases">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="beforeSuite" is-config="true" duration-ms="78" started-at="2016-10-19T18:11:34Z" finished-at="2016-10-19T18:11:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="10231" started-at="2016-10-17T12:27:35Z" finished-at="2016-10-17T12:27:45Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="10955" started-at="2016-10-19T18:11:34Z" finished-at="2016-10-19T18:11:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="enterBlankCredentials()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterBlankCredentials" duration-ms="2252" started-at="2016-10-17T12:27:45Z" finished-at="2016-10-17T12:27:48Z">
+        <test-method status="PASS" signature="verifyCaseStudiesLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyCaseStudiesLink" duration-ms="13787" started-at="2016-10-19T18:11:45Z" finished-at="2016-10-19T18:11:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enterBlankCredentials -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="948" started-at="2016-10-17T12:27:48Z" finished-at="2016-10-17T12:27:48Z">
+        </test-method> <!-- verifyCaseStudiesLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="335" started-at="2016-10-19T18:11:59Z" finished-at="2016-10-19T18:11:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyCaseStudiesLink status=SUCCESS method=LandingPageTestCases.verifyCaseStudiesLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="8390" started-at="2016-10-17T12:27:48Z" finished-at="2016-10-17T12:27:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="enterBlankUserEmail()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterBlankUserEmail" duration-ms="1825" started-at="2016-10-17T12:27:57Z" finished-at="2016-10-17T12:27:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enterBlankUserEmail -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="832" started-at="2016-10-17T12:27:59Z" finished-at="2016-10-17T12:28:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="7992" started-at="2016-10-17T12:28:00Z" finished-at="2016-10-17T12:28:08Z">
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="10115" started-at="2016-10-19T18:11:59Z" finished-at="2016-10-19T18:12:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="enterBlankUserPassword()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterBlankUserPassword" duration-ms="1912" started-at="2016-10-17T12:28:08Z" finished-at="2016-10-17T12:28:09Z">
+        <test-method status="PASS" signature="verifyCurriculumLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyCurriculumLink" duration-ms="1808" started-at="2016-10-19T18:12:09Z" finished-at="2016-10-19T18:12:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enterBlankUserPassword -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="833" started-at="2016-10-17T12:28:09Z" finished-at="2016-10-17T12:28:10Z">
+        </test-method> <!-- verifyCurriculumLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="174" started-at="2016-10-19T18:12:11Z" finished-at="2016-10-19T18:12:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyCurriculumLink status=SUCCESS method=LandingPageTestCases.verifyCurriculumLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="7837" started-at="2016-10-17T12:28:10Z" finished-at="2016-10-17T12:28:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="enterInvalidCredentials()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterInvalidCredentials" duration-ms="1967" started-at="2016-10-17T12:28:18Z" finished-at="2016-10-17T12:28:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enterInvalidCredentials -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="821" started-at="2016-10-17T12:28:20Z" finished-at="2016-10-17T12:28:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="8661" started-at="2016-10-17T12:28:21Z" finished-at="2016-10-17T12:28:30Z">
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="8907" started-at="2016-10-19T18:12:11Z" finished-at="2016-10-19T18:12:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="enterInvalidEmailFormatTypeOne()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterInvalidEmailFormatTypeOne" duration-ms="2214" started-at="2016-10-17T12:28:30Z" finished-at="2016-10-17T12:28:32Z">
+        <test-method status="PASS" signature="verifyFeatureAndPlanLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyFeatureAndPlanLink" duration-ms="999" started-at="2016-10-19T18:12:20Z" finished-at="2016-10-19T18:12:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enterInvalidEmailFormatTypeOne -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="1098" started-at="2016-10-17T12:28:32Z" finished-at="2016-10-17T12:28:33Z">
+        </test-method> <!-- verifyFeatureAndPlanLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="132" started-at="2016-10-19T18:12:21Z" finished-at="2016-10-19T18:12:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyFeatureAndPlanLink status=SUCCESS method=LandingPageTestCases.verifyFeatureAndPlanLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="8713" started-at="2016-10-17T12:28:33Z" finished-at="2016-10-17T12:28:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="enterInvalidEmailFormatTypeThree()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterInvalidEmailFormatTypeThree" duration-ms="2004" started-at="2016-10-17T12:28:42Z" finished-at="2016-10-17T12:28:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enterInvalidEmailFormatTypeThree -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="941" started-at="2016-10-17T12:28:44Z" finished-at="2016-10-17T12:28:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="8684" started-at="2016-10-17T12:28:45Z" finished-at="2016-10-17T12:28:53Z">
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="7671" started-at="2016-10-19T18:12:21Z" finished-at="2016-10-19T18:12:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="enterInvalidEmailFormatTypeTwo()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterInvalidEmailFormatTypeTwo" duration-ms="2115" started-at="2016-10-17T12:28:53Z" finished-at="2016-10-17T12:28:55Z">
+        <test-method status="PASS" signature="verifyFreeGrade1MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyFreeGrade1MathAppLink" duration-ms="6443" started-at="2016-10-19T18:12:29Z" finished-at="2016-10-19T18:12:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enterInvalidEmailFormatTypeTwo -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="826" started-at="2016-10-17T12:28:55Z" finished-at="2016-10-17T12:28:56Z">
+        </test-method> <!-- verifyFreeGrade1MathAppLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="158" started-at="2016-10-19T18:12:36Z" finished-at="2016-10-19T18:12:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyFreeGrade1MathAppLink status=SUCCESS method=LandingPageTestCases.verifyFreeGrade1MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="11850" started-at="2016-10-17T12:28:56Z" finished-at="2016-10-17T12:29:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="enterUserPassword_InvalidPasswordLength()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="enterUserPassword_InvalidPasswordLength" duration-ms="1936" started-at="2016-10-17T12:29:08Z" finished-at="2016-10-17T12:29:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enterUserPassword_InvalidPasswordLength -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="868" started-at="2016-10-17T12:29:10Z" finished-at="2016-10-17T12:29:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="9480" started-at="2016-10-17T12:29:11Z" finished-at="2016-10-17T12:29:20Z">
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="8953" started-at="2016-10-19T18:12:36Z" finished-at="2016-10-19T18:12:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="validSignUpTypeOne_usingSmallCharaters()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="validSignUpTypeOne_usingSmallCharaters" duration-ms="5284" started-at="2016-10-17T12:29:20Z" finished-at="2016-10-17T12:29:26Z">
+        <test-method status="PASS" signature="verifyFreeGrade2MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyFreeGrade2MathAppLink" duration-ms="30534" started-at="2016-10-19T18:12:45Z" finished-at="2016-10-19T18:13:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validSignUpTypeOne_usingSmallCharaters -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="831" started-at="2016-10-17T12:29:26Z" finished-at="2016-10-17T12:29:26Z">
+        </test-method> <!-- verifyFreeGrade2MathAppLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="249" started-at="2016-10-19T18:13:15Z" finished-at="2016-10-19T18:13:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyFreeGrade2MathAppLink status=SUCCESS method=LandingPageTestCases.verifyFreeGrade2MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="9327" started-at="2016-10-17T12:29:26Z" finished-at="2016-10-17T12:29:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="validSignUpTypeTwo_usingCapitalCharaters()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="validSignUpTypeTwo_usingCapitalCharaters" duration-ms="4586" started-at="2016-10-17T12:29:36Z" finished-at="2016-10-17T12:29:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validSignUpTypeTwo_usingCapitalCharaters -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="875" started-at="2016-10-17T12:29:40Z" finished-at="2016-10-17T12:29:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="8904" started-at="2016-10-17T12:29:41Z" finished-at="2016-10-17T12:29:50Z">
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="8996" started-at="2016-10-19T18:13:15Z" finished-at="2016-10-19T18:13:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="verifyAlreadySignUpUserEmailAccount()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="verifyAlreadySignUpUserEmailAccount" duration-ms="6840" started-at="2016-10-17T12:29:50Z" finished-at="2016-10-17T12:29:57Z">
+        <test-method status="PASS" signature="verifyFreeGrade3MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyFreeGrade3MathAppLink" duration-ms="18401" started-at="2016-10-19T18:13:24Z" finished-at="2016-10-19T18:13:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAlreadySignUpUserEmailAccount -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="788" started-at="2016-10-17T12:29:57Z" finished-at="2016-10-17T12:29:58Z">
+        </test-method> <!-- verifyFreeGrade3MathAppLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="134" started-at="2016-10-19T18:13:43Z" finished-at="2016-10-19T18:13:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyFreeGrade3MathAppLink status=SUCCESS method=LandingPageTestCases.verifyFreeGrade3MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="10263" started-at="2016-10-17T12:29:58Z" finished-at="2016-10-17T12:30:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="verifyFacebookSignUp()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="verifyFacebookSignUp" duration-ms="3743" started-at="2016-10-17T12:30:08Z" finished-at="2016-10-17T12:30:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyFacebookSignUp -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="839" started-at="2016-10-17T12:30:12Z" finished-at="2016-10-17T12:30:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="222530" started-at="2016-10-17T12:30:13Z" finished-at="2016-10-17T12:33:55Z">
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="10291" started-at="2016-10-19T18:13:43Z" finished-at="2016-10-19T18:13:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="verifyGoogleSignUp()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="verifyGoogleSignUp" duration-ms="24" started-at="2016-10-17T12:33:55Z" finished-at="2016-10-17T12:33:55Z">
+        <test-method status="PASS" signature="verifyFreeGrade4MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyFreeGrade4MathAppLink" duration-ms="7670" started-at="2016-10-19T18:13:53Z" finished-at="2016-10-19T18:14:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyGoogleSignUp -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="846" started-at="2016-10-17T12:33:55Z" finished-at="2016-10-17T12:33:56Z">
+        </test-method> <!-- verifyFreeGrade4MathAppLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="191" started-at="2016-10-19T18:14:01Z" finished-at="2016-10-19T18:14:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyFreeGrade4MathAppLink status=SUCCESS method=LandingPageTestCases.verifyFreeGrade4MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="7728" started-at="2016-10-17T12:33:56Z" finished-at="2016-10-17T12:34:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="verifyLinkPrivacyPolicy()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="verifyLinkPrivacyPolicy" duration-ms="3565" started-at="2016-10-17T12:34:04Z" finished-at="2016-10-17T12:34:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLinkPrivacyPolicy -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="852" started-at="2016-10-17T12:34:07Z" finished-at="2016-10-17T12:34:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="openBrowser" is-config="true" duration-ms="10034" started-at="2016-10-17T12:34:08Z" finished-at="2016-10-17T12:34:18Z">
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="10265" started-at="2016-10-19T18:14:01Z" finished-at="2016-10-19T18:14:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="verifyLinkTerms()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="verifyLinkTerms" duration-ms="3468" started-at="2016-10-17T12:34:18Z" finished-at="2016-10-17T12:34:22Z">
+        <test-method status="PASS" signature="verifyFreeGrade5MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyFreeGrade5MathAppLink" duration-ms="70684" started-at="2016-10-19T18:14:11Z" finished-at="2016-10-19T18:15:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLinkTerms -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="closeBrowser" is-config="true" duration-ms="823" started-at="2016-10-17T12:34:22Z" finished-at="2016-10-17T12:34:22Z">
+        </test-method> <!-- verifyFreeGrade5MathAppLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="3845" started-at="2016-10-19T18:15:22Z" finished-at="2016-10-19T18:15:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyFreeGrade5MathAppLink status=SUCCESS method=LandingPageTestCases.verifyFreeGrade5MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="FAIL" signature="afterSuite()[pri:0, instance:testCases.LandingPageParentSignUp@af6cff]" name="afterSuite" is-config="true" duration-ms="0" started-at="2016-10-17T12:34:23Z" finished-at="2016-10-17T12:34:23Z">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.0.0-beta4', revision: '3169782', time: '2016-09-29 10:29:23 -0700'
-System info: host: 'DTAL14', ip: '192.168.1.66', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_102'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.0.0-beta4', revision: '3169782', time: '2016-09-29 10:29:23 -0700'
-System info: host: 'DTAL14', ip: '192.168.1.66', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_102'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:130)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:323)
-	at basic.Base.afterSuite(Base.java:64)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="12355" started-at="2016-10-19T18:15:26Z" finished-at="2016-10-19T18:15:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyFreeKindergartenMathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyFreeKindergartenMathAppLink" duration-ms="63580" started-at="2016-10-19T18:15:38Z" finished-at="2016-10-19T18:16:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFreeKindergartenMathAppLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="2355" started-at="2016-10-19T18:16:42Z" finished-at="2016-10-19T18:16:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyFreeKindergartenMathAppLink status=SUCCESS method=LandingPageTestCases.verifyFreeKindergartenMathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="9379" started-at="2016-10-19T18:16:44Z" finished-at="2016-10-19T18:16:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyGrade1MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyGrade1MathAppLink" duration-ms="17781" started-at="2016-10-19T18:16:54Z" finished-at="2016-10-19T18:17:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGrade1MathAppLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="2153" started-at="2016-10-19T18:17:11Z" finished-at="2016-10-19T18:17:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyGrade1MathAppLink status=SUCCESS method=LandingPageTestCases.verifyGrade1MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="15877" started-at="2016-10-19T18:17:14Z" finished-at="2016-10-19T18:17:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyGrade2MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyGrade2MathAppLink" duration-ms="4685" started-at="2016-10-19T18:17:29Z" finished-at="2016-10-19T18:17:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGrade2MathAppLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="2495" started-at="2016-10-19T18:17:34Z" finished-at="2016-10-19T18:17:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyGrade2MathAppLink status=SUCCESS method=LandingPageTestCases.verifyGrade2MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="8613" started-at="2016-10-19T18:17:37Z" finished-at="2016-10-19T18:17:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyGrade3MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyGrade3MathAppLink" duration-ms="20354" started-at="2016-10-19T18:17:45Z" finished-at="2016-10-19T18:18:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGrade3MathAppLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="285" started-at="2016-10-19T18:18:06Z" finished-at="2016-10-19T18:18:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyGrade3MathAppLink status=SUCCESS method=LandingPageTestCases.verifyGrade3MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="13091" started-at="2016-10-19T18:18:06Z" finished-at="2016-10-19T18:18:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyGrade4MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyGrade4MathAppLink" duration-ms="5221" started-at="2016-10-19T18:18:19Z" finished-at="2016-10-19T18:18:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGrade4MathAppLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="267" started-at="2016-10-19T18:18:24Z" finished-at="2016-10-19T18:18:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyGrade4MathAppLink status=SUCCESS method=LandingPageTestCases.verifyGrade4MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="10862" started-at="2016-10-19T18:18:24Z" finished-at="2016-10-19T18:18:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyGrade5MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyGrade5MathAppLink" duration-ms="7774" started-at="2016-10-19T18:18:35Z" finished-at="2016-10-19T18:18:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGrade5MathAppLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="247" started-at="2016-10-19T18:18:43Z" finished-at="2016-10-19T18:18:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyGrade5MathAppLink status=SUCCESS method=LandingPageTestCases.verifyGrade5MathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="13823" started-at="2016-10-19T18:18:43Z" finished-at="2016-10-19T18:18:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyKinderGartenMathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyKinderGartenMathAppLink" duration-ms="15561" started-at="2016-10-19T18:18:57Z" finished-at="2016-10-19T18:19:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyKinderGartenMathAppLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="2199" started-at="2016-10-19T18:19:13Z" finished-at="2016-10-19T18:19:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyKinderGartenMathAppLink status=SUCCESS method=LandingPageTestCases.verifyKinderGartenMathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="16658" started-at="2016-10-19T18:19:15Z" finished-at="2016-10-19T18:19:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyParentSignUpButton()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyParentSignUpButton" duration-ms="1527" started-at="2016-10-19T18:19:32Z" finished-at="2016-10-19T18:19:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyParentSignUpButton -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="226" started-at="2016-10-19T18:19:33Z" finished-at="2016-10-19T18:19:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyParentSignUpButton status=SUCCESS method=LandingPageTestCases.verifyParentSignUpButton()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="14262" started-at="2016-10-19T18:19:33Z" finished-at="2016-10-19T18:19:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyPremiumSplashmathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyPremiumSplashmathAppLink" duration-ms="6625" started-at="2016-10-19T18:19:48Z" finished-at="2016-10-19T18:19:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPremiumSplashmathAppLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="253" started-at="2016-10-19T18:19:54Z" finished-at="2016-10-19T18:19:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPremiumSplashmathAppLink status=SUCCESS method=LandingPageTestCases.verifyPremiumSplashmathAppLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="14545" started-at="2016-10-19T18:19:54Z" finished-at="2016-10-19T18:20:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifySignInLink()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifySignInLink" duration-ms="1755" started-at="2016-10-19T18:20:09Z" finished-at="2016-10-19T18:20:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignInLink -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="152" started-at="2016-10-19T18:20:11Z" finished-at="2016-10-19T18:20:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySignInLink status=SUCCESS method=LandingPageTestCases.verifySignInLink()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="openBrowser" is-config="true" duration-ms="13415" started-at="2016-10-19T18:20:11Z" finished-at="2016-10-19T18:20:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyTeacherSignUpButton()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="verifyTeacherSignUpButton" duration-ms="3151" started-at="2016-10-19T18:20:24Z" finished-at="2016-10-19T18:20:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTeacherSignUpButton -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterMethod" is-config="true" duration-ms="2368" started-at="2016-10-19T18:20:27Z" finished-at="2016-10-19T18:20:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTeacherSignUpButton status=SUCCESS method=LandingPageTestCases.verifyTeacherSignUpButton()[pri:0, instance:testCases.LandingPageTestCases@167135c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testCases.LandingPageTestCases@167135c]" name="afterSuite" is-config="true" duration-ms="0" started-at="2016-10-19T18:20:30Z" finished-at="2016-10-19T18:20:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- testCases.LandingPageParentSignUp -->
+      </class> <!-- testCases.LandingPageTestCases -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

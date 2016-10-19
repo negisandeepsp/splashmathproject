@@ -6,8 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class WindowHandling {
-	SplashmathScreenShot image;
-	WebDriver driver;
+	public SplashmathScreenShot image;
+	public WebDriver driver;
 	
 	public WindowHandling(WebDriver driver)
 	{
@@ -15,7 +15,7 @@ public class WindowHandling {
 	}
 	
 	
-	public void onWindow(String folderName, String location, By element) throws Exception
+	public void onWindow(String folderName, String imageName, By element) throws Exception
 	{
 		image = new SplashmathScreenShot(driver);
 		String parentWindow = driver.getWindowHandle();
@@ -27,7 +27,7 @@ public class WindowHandling {
 			{
 				driver.switchTo().window(currentWindow);
 				Thread.sleep(1000);
-				image.takeScreenshot(folderName, location);
+				image.takeScreenshot(folderName, imageName);
 				driver.close();
 			}
 			

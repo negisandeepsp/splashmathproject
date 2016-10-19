@@ -62,7 +62,7 @@ public class LandingPageParentSignUp extends Base
 				findElement = new VerifyElementOnWebPage(driver);
 				
 				test = extent.startTest("Verify enterInvalidCredentials");
-					
+				
 				images = new SplashmathScreenShot(driver);
 				
 				signUp= new ParentSignUp(driver);
@@ -102,6 +102,12 @@ public class LandingPageParentSignUp extends Base
 				{
 					test.log((LogStatus.PASS), " Verified InvalidCredentials on Parent SignUp Form Page ");
 					images.takeScreenshot("LandingPage_ParentSignUP", "SignUp_InvalidCredentials");
+		// To take Screenshot using Extent report			
+	//		String location = "./ScreenShots/" + FolderName+ "/" + imageName + ".png";
+					
+			//		test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("./ScreenShots" +"/LandingPage_ParentSignUP"+"/SignUp_InvalidCredentials"+".png"));
+					
+					
 				}
 				else
 				{
@@ -153,12 +159,13 @@ public class LandingPageParentSignUp extends Base
 				{
 					test.log(LogStatus.INFO, "Error message below Password field not present or is changed");
 				}
-				Assert.assertEquals(driver.findElement(By.id("signup-button")).getAttribute("value"), "Sign up for FREE");
+	//			Assert.assertEquals(driver.findElement(By.id("signup-button")).getAttribute("value"), "Sign up for FREE");
 			
 				if(driver.findElement(signUpForFreeButton).getAttribute("value").contains("Sign up"))
 				{
 					test.log((LogStatus.PASS), " Verified BlankCredentials on Parent SignUp Form Page ");
 					images.takeScreenshot("LandingPage_ParentSignUP", "SignUp_EnterBlankCredentials");
+	//				test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"SignUp_EnterBlankCredentials"+".png"));
 				}
 				else
 				{
@@ -198,13 +205,12 @@ public class LandingPageParentSignUp extends Base
 					test.log(LogStatus.INFO, "Error message below Email field not present or is changed");
 				}
 				
-
-				Assert.assertEquals(driver.findElement(By.id("signup-button")).getAttribute("value"), "Sign up for FREE");
 				
 				if(driver.findElement(signUpForFreeButton).getAttribute("value").contains("Sign up"))
 				{
 					test.log((LogStatus.PASS), " Verified BlankUserEmail on Parent SignUp Form Page ");
 					images.takeScreenshot("LandingPage_ParentSignUP", "SignUp_EnterBlankUserEmail");
+	//				test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"SignUp_EnterBlankUserEmail"+".png"));
 				}
 				else
 				{
@@ -247,13 +253,13 @@ public class LandingPageParentSignUp extends Base
 				{
 					test.log(LogStatus.INFO, "Error message below Password field not present or is changed");
 				}
-				Assert.assertEquals(driver.findElement(By.id("signup-button")).getAttribute("value"), "Sign up for FREE");
 				
 				
 				if(driver.findElement(signUpForFreeButton).getAttribute("value").contains("Sign up"))
 				{
 					test.log((LogStatus.PASS), " Verified BlankUserPassword on Parent SignUp Form Page ");
 					images.takeScreenshot("LandingPage_ParentSignUP", "SignUp_EnterBlankUserPassword");
+		//			test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"SignUp_EnterBlankUserPassword"+".png"));
 				}
 				else
 				{
@@ -294,13 +300,13 @@ public class LandingPageParentSignUp extends Base
 			
 				System.out.println(driver.findElement(By.id("signup-button")).getAttribute("value"));
 			
-			Assert.assertEquals(driver.findElement(By.id("signup-button")).getAttribute("value"), "Sign up for FREE");
-			
 			
 			if(driver.findElement(signUpForFreeButton).getAttribute("value").contains("Sign up"))
 			{
 				test.log((LogStatus.PASS), " Verified InvalidEmailFormatTypeOne_without.com on Parent SignUp Form Page ");
 				images.takeScreenshot("LandingPage_ParentSignUP", "SignUp_EnterInvalidEmailFormatTypeOne_without.com");
+	//			test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"SignUp_EnterInvalidEmailFormatTypeOne_without.com"+".png"));
+
 			}
 			else
 			{
@@ -342,14 +348,13 @@ public class LandingPageParentSignUp extends Base
 				test.log(LogStatus.INFO, "Error message below Email field not present or is changed");
 			}
 			
-			
-			Assert.assertEquals(driver.findElement(By.id("signup-button")).getAttribute("value"), "Sign up for FREE");
-			
 
 			if(driver.findElement(signUpForFreeButton).getAttribute("value").contains("Sign up"))
 			{
 				test.log((LogStatus.PASS), " Verified InvalidEmailFormatTypeTwo_multiple@@ on Parent SignUp Form Page ");
 				images.takeScreenshot("LandingPage_ParentSignUP", "SignUp_EnterInvalidEmailFormatTypeTwo_multiple@@");
+		//		test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"SignUp_EnterInvalidEmailFormatTypeTwo_multiple@@"+".png"));
+
 			}
 			else
 			{
@@ -376,7 +381,6 @@ public class LandingPageParentSignUp extends Base
 	
 			WebDriverWait signUpButton= new WebDriverWait(driver,20);
 			signUpButton.until(ExpectedConditions.elementToBeClickable(driver.findElement(doSignUpButton)));
-		//		System.out.println(driver.findElement(By.id("signup-button")).getAttribute("value"));
 			
 			elementStatus = findElement.isElementPresent(emailErrorMsg);
 			if (elementStatus)
@@ -389,12 +393,13 @@ public class LandingPageParentSignUp extends Base
 				test.log(LogStatus.INFO, "Error message below Email field not present or is changed");
 			}
 			
-			Assert.assertEquals(driver.findElement(By.id("signup-button")).getAttribute("value"), "Sign up for FREE");
 			
 			if(driver.findElement(signUpForFreeButton).getAttribute("value").contains("Sign up"))
 			{
 				test.log((LogStatus.PASS), " Verified InvalidEmailFormatTypeThree_EmailStartingWith@ on Parent SignUp Form Page ");
 				images.takeScreenshot("LandingPage_ParentSignUP", "SignUp_EnterInvalidEmailFormatTypeThree_EmailStartingWith@");
+		//		test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"SignUp_EnterInvalidEmailFormatTypeThree_EmailStartingWith@"+".png"));
+
 			}
 			else
 			{
@@ -421,8 +426,6 @@ public class LandingPageParentSignUp extends Base
 	
 			WebDriverWait signUpButton= new WebDriverWait(driver,20);
 			signUpButton.until(ExpectedConditions.elementToBeClickable(driver.findElement(doSignUpButton)));
-	
-		//		System.out.println(driver.findElement(By.id("signup-button")).getAttribute("value"));
 			
 			elementStatus = findElement.isElementPresent(passwordErrorMsg);
 			
@@ -435,12 +438,13 @@ public class LandingPageParentSignUp extends Base
 			{
 				test.log(LogStatus.INFO, "Error message below Password field not present or is changed");
 			}
-	//		Assert.assertEquals(driver.findElement(By.id("signup-button")).getAttribute("value"), "Sign up for FREE");
 			
 			if(driver.findElement(signUpForFreeButton).getAttribute("value").contains("Sign up"))
 			{
 				test.log((LogStatus.PASS), " Verified UserPassword_InvalidPasswordLength_LessThan_6_Characters on Parent SignUp Form Page ");
 				images.takeScreenshot("LandingPage_ParentSignUP", "SignUp_EnterUserPassword_InvalidPasswordLength_LessThan_6_Characters");
+	//			test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"SignUp_EnterUserPassword_InvalidPasswordLength_LessThan_6_Characters"+".png"));
+
 			}
 			else
 			{
@@ -466,7 +470,6 @@ public class LandingPageParentSignUp extends Base
 			test = extent.startTest("Verify AlreadySignUpUserEmailAccount");
 			images = new SplashmathScreenShot(driver);
 			signUp= new ParentSignUp(driver);
-			//sandeep.negi+pg012@splashmath.com
 			signUp.enterData("sandeep.negi+pg012@splashmath.com","123456");
 			
 			WebDriverWait alreadySignUpPage = new WebDriverWait(driver, 10);
@@ -479,6 +482,8 @@ public class LandingPageParentSignUp extends Base
 				test.log(LogStatus.INFO, "On Already SignUp Form Page");
 				test.log(LogStatus.PASS, "Verified AlreadySignUpUserEmailAccount ");
 				images.takeScreenshot("LandingPage_ParentSignUP", "SignUp_verifyAlreadySignUpUserEmailAccount");
+	//			test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"SignUp_verifyAlreadySignUpUserEmailAccount"+".png"));
+
 			}
 			
 			else
@@ -528,11 +533,12 @@ public class LandingPageParentSignUp extends Base
 				test.log(LogStatus.INFO, "On Add child Form Page");
 				test.log(LogStatus.PASS, "Verified Parent SignUp usingSmallCharaters");
 				images.takeScreenshot("LandingPage_ParentSignUP", "SignUp_validSignUpTypeOne_usingSmallCharaters");
+	//			test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"SignUp_validSignUpTypeOne_usingSmallCharaters"+".png"));
+
 			}
 			
 			else
 			{
-				
 				test.log(LogStatus.FAIL, "Parent SignUp Failed");
 			}
 			
@@ -577,6 +583,8 @@ public class LandingPageParentSignUp extends Base
 				test.log(LogStatus.INFO, "On Add child Form Page");
 				test.log(LogStatus.PASS, "Verified Parent SignUp usingCapitalCharaters");
 				images.takeScreenshot("LandingPage_ParentSignUP", "SignUp_validSignUpTypeTwo_usingCapitalCharaters");
+	//			test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"SignUp_validSignUpTypeTwo_usingCapitalCharaters"+".png"));
+
 			}
 			
 			else
@@ -756,6 +764,8 @@ public class LandingPageParentSignUp extends Base
 												test.log(LogStatus.INFO,"Page After Google SignUp = " + driver.getTitle());
 												test.log(LogStatus.INFO, "URL =" + driver.getCurrentUrl());
 												images.takeScreenshot("LandingPage_ParentSignUP", "Parent SignUp via Google");
+			//									test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"Parent SignUp via Google"+".png"));
+
 												test.log(LogStatus.PASS, "Google SignUp Page verified");
 											}
 											
@@ -764,6 +774,8 @@ public class LandingPageParentSignUp extends Base
 												test.log(LogStatus.INFO,"User already SignUp as an Teacher using existing Credential, use different Credentials");
 												test.log(LogStatus.INFO, "URL =" + driver.getCurrentUrl());
 												images.takeScreenshot("LandingPage_ParentSignUP", "Teacher SignUp via Google");
+				//								test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"Teacher SignUp via Google"+".png"));
+
 												test.log(LogStatus.PASS, "Google SignUp Page verified");
 											}
 								// Page title checked			
@@ -834,12 +846,16 @@ public class LandingPageParentSignUp extends Base
 							test.log(LogStatus.INFO, "URL = " +driver.getCurrentUrl());
 							test.log(LogStatus.PASS, "Verfied Facebook SignUp");
 							images.takeScreenshot("LandingPage_ParentSignUP", "FacebookPage");
+		//					test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"FacebookPage"+".png"));
+
 						}
 						else
 						{
 							test.log(LogStatus.INFO, "URL = " +driver.getCurrentUrl());
 							test.log(LogStatus.FAIL, "Something Wrong on this Page");
 							images.takeScreenshot("LandingPage_ParentSignUP", "SomethingWrongOnFacebookPage");
+		//					test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"SomethingWrongOnFacebookPage"+".png"));
+
 						}
 					
 				}
@@ -849,6 +865,8 @@ public class LandingPageParentSignUp extends Base
 					test.log(LogStatus.INFO, "User not on Facebook Page");
 					test.log(LogStatus.INFO, "URL = " +driver.getCurrentUrl());
 					images.takeScreenshot("LandingPage_ParentSignUP", "Incorrect FacebookPage");
+		//			test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"Incorrect FacebookPage"+".png"));
+
 				}
 			}
 			
@@ -856,6 +874,8 @@ public class LandingPageParentSignUp extends Base
 			{
 				test.log(LogStatus.INFO, "Facebook Button Not present on Page");
 				images.takeScreenshot("LandingPage_ParentSignUP", "Facebook Button missing on Page");
+		//		test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"Facebook Button missing on Page"+".png"));
+
 				
 			}
 			}
@@ -863,6 +883,8 @@ public class LandingPageParentSignUp extends Base
 			else
 			{
 				test.log(LogStatus.INFO, "Parent SignUp Button not present on page");
+		//		test.log(LogStatus.INFO, "ScreenShot : "+test.addScreenCapture("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ScreenShots\\" +"LandingPage_ParentSignUP\\"+"ParentSignUp Button missing on Page"+".png"));
+
 			}
 			
 		}

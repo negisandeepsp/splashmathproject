@@ -12,6 +12,8 @@ import com.relevantcodes.extentreports.ExtentReports;
 	public class SplashmathScreenShot {
 	public WebDriver driver ;
 	
+	//https://github.com/anshooarora/extentreports-java/issues/243
+	
 	public SplashmathScreenShot(WebDriver driver)
 	{
 		this.driver = driver;
@@ -25,7 +27,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 			TakesScreenshot photo=(TakesScreenshot)driver;
 			File source = photo.getScreenshotAs(OutputType.FILE);
 			
-			String dest = "./ScreenShots/" + FolderName+ "/" + imageName + ".png";
+			String dest = "./ReportSummary/"+ "ScreenShots/" + FolderName+ "/" + imageName + ".png";
 			File destination = new File(dest);
 			
 			FileUtils.copyFile(source, destination);

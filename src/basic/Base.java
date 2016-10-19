@@ -8,6 +8,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -51,18 +52,31 @@ public class Base
 	}
 	
 	@AfterMethod
-	public void closeBrowser()
+		public void afterMethod(ITestResult result) 
 	{
-		extent.endTest(test);
-		extent.flush();  
-		driver.quit();
-	}
+	        if (result.getStatus() == ITestResult.FAILURE)
+	        {
+	            test.log(LogStatus.FAIL, "Test Failed " + result.getThrowable());
+	        } 
+	        else if (result.getStatus() == ITestResult.SKIP) 
+	        {
+	            test.log(LogStatus.SKIP, "Test skipped " + result.getThrowable());
+	        }
+	        else 
+	        {
+	            test.log(LogStatus.PASS, "Test passed");
+	        }
+	        
+	        extent.endTest(test);        
+	        extent.flush();
+	        driver.close();
+	    }
 	
 	@AfterSuite
 	public void afterSuite()
 	{
-		driver.get("C:\\Users\\STUDYPAD\\workspace\\ProjectSplashmath\\ReportSummary\\SplashmathReport.html");
 		extent.close();
+		
 	}
 
 }
