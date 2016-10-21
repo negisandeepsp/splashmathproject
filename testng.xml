@@ -8,12 +8,12 @@
      
      --> 
      
-     <class name = "testCases.LandingPageTestCases">
+     <class name = "testCases.UserSignUpFlowType">
      
-  <!--     <methods>
-     <include name="verifyPremiumSplashmathAppLink" />
+      <methods>
+     <include name="UserSignUpFlowType" />
      </methods>
- -->
+
  	 </class>
   
   

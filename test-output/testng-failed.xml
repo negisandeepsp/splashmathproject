@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="testCases.LandingPageTestCases">
+      <class name="testCases.UserSignUpFlowType">
         <methods>
           <include name="afterSuite"/>
-          <include name="viewcaseStudiesPage"/>
           <include name="afterMethod"/>
           <include name="beforeSuite"/>
+          <include name="verifySignUpFlow"/>
           <include name="openBrowser"/>
         </methods>
-      </class> <!-- testCases.LandingPageTestCases -->
+      </class> <!-- testCases.UserSignUpFlowType -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

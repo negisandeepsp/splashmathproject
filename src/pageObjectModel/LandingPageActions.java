@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+import commonUtility.LinkOnPage;
 import commonUtility.SplashmathScreenShot;
 import commonUtility.WindowHandling;
 import verifyPresenceOfElement.VerifyElementOnWebPage;
@@ -50,14 +51,34 @@ public class LandingPageActions
 	private By footer_Grade5MathFreeApp=By.linkText("Grade 5 Free Math App");
 	
 	private By footer_KinderGartenMathWorksheet=By.linkText("Kindergarten Math Worksheets");
+	private By kinderGartenWorksheet_ParentSignUpButton = By.name("commit");
+	
 	private By footer_Grade1Worksheet=By.linkText("First Math Worksheets");
+	private By Grade1Worksheet_ParentSignUpButton = By.name("commit");
+	
 	private By footer_Grade2Worksheet=By.linkText("Second Grade Math Worksheets");
+	private By Grade2Worksheet_ParentSignUpButton = By.name("commit");
+	
 	private By footer_Grade3Worksheet=By.linkText("Third Grade Math Worksheets");
+	private By Grade3Worksheet_ParentSignUpButton = By.name("commit");
+	
 	private By footer_Grade4Worksheet=By.linkText("Fourth Grade Math Worksheets");
+	private By Grade4Worksheet_ParentSignUpButton = By.name("commit");
+	
 	private By footer_Grade5Worksheet=By.linkText("Fifth Grade Math Worksheets");
-
+	private By Grade5Worksheet_ParentSignUpButton = By.name("commit");
+	
+	private By footer_CommonCoreMathVocabulary= By.linkText("Common Core Math Vocabulary");
+	private By commonCoreVocabularyPage_Grade1=By.linkText("Grade 1");
+	private By footer_CommonCoreCurriculum=By.linkText("Common Core Curriculum");
+	private By commonCoreCurriculumPage_Grade1=By.linkText("Grade1");
+	
 	private By footer_AboutUs=By.linkText("About Us");
+	private By aboutUspage_splashmathlink=By.linkText("www.splashmath.com");
+	
 	private By footer_ContactUs=By.linkText("Contact Us");
+	private By contactUsPage_submitButton=By.name("commit");
+	
 	private By footer_SplashmathBlog=By.linkText("Splash Math Blog");
 	private By footer_SplashmathReviews=By.linkText("Splash Math Reviews");
 	private By footer_SplashmathApps=By.linkText("Splash Math Apps");
@@ -87,6 +108,7 @@ public class LandingPageActions
 	public SplashmathScreenShot images;
 	public ExtentTest test;
 	public WindowHandling windowTab;
+	public LinkOnPage pagelink;
 	
 	public LandingPageActions(WebDriver driver, ExtentTest test)
 	{
@@ -590,7 +612,346 @@ public class LandingPageActions
 		}
 	}
 	
+	/*
+	 * private By footer_KinderGartenMathWorksheet=By.linkText("Kindergarten Math Worksheets");
+	private By footer_Grade1Worksheet=By.linkText("First Math Worksheets");
+	private By footer_Grade2Worksheet=By.linkText("Second Grade Math Worksheets");
+	private By footer_Grade3Worksheet=By.linkText("Third Grade Math Worksheets");
+	private By footer_Grade4Worksheet=By.linkText("Fourth Grade Math Worksheets");
+	private By footer_Grade5Worksheet=By.linkText("Fifth Grade Math Worksheets");
+	Common Core Math Vocabulary
+	 */
 	
+	public void clickKinderGartenMathWorksheetLink() throws Exception
+	{
+		verifyElement = new VerifyElementOnWebPage(driver);
+		images= new SplashmathScreenShot(driver);
+		windowTab = new WindowHandling(driver);
+		boolean elementStatus = false;
+		
+		test.log(LogStatus.INFO, "User on Splashmath Landing Page");
+		elementStatus = verifyElement.isElementPresent(footer_KinderGartenMathWorksheet);
+		
+		if(elementStatus)
+		{
+			driver.findElement(footer_KinderGartenMathWorksheet).click();
+			test.log(LogStatus.INFO, "User clicked on KinderGarten Worksheet link");
+			//kinderGartenWorksheet_ParentSignUpButton
+			
+			WebDriverWait signUpButton=new WebDriverWait(driver,10);
+			signUpButton.until(ExpectedConditions.elementToBeClickable(kinderGartenWorksheet_ParentSignUpButton));
+			
+			test.log(LogStatus.INFO, "User on KinderGarten Worksheet Page");
+			images.takeScreenshot("GradeKWorksheet", "KinderGarten_Worksheet");
+			
+		}
+		else
+		{
+			test.log(LogStatus.INFO, "KinderGartenMathWorksheet link missing or has changed");
+		}
+	}
 	
+	public void clickGrade1MathWorksheetLink() throws Exception
+	{
+		verifyElement = new VerifyElementOnWebPage(driver);
+		images= new SplashmathScreenShot(driver);
+		windowTab = new WindowHandling(driver);
+		boolean elementStatus = false;
+		
+		test.log(LogStatus.INFO, "User on Splashmath Landing Page");
+		elementStatus = verifyElement.isElementPresent(footer_Grade2Worksheet);
+		
+		if(elementStatus)
+		{
+			driver.findElement(footer_Grade1Worksheet).click();
+			test.log(LogStatus.INFO, "User clicked on Grade1 Worksheet link");
+			
+			WebDriverWait signUpButton=new WebDriverWait(driver,10);
+			signUpButton.until(ExpectedConditions.elementToBeClickable(Grade1Worksheet_ParentSignUpButton));
+			
+			test.log(LogStatus.INFO, "User on Grade1 Worksheet Page");
+			images.takeScreenshot("Grade1", "Grade1_Worksheet");
+			
+		}
+		else
+		{
+			test.log(LogStatus.INFO, "Grade1 Worksheet link missing or has changed");
+		}
+	}
 	
+	public void clickGrade2MathWorksheetLink() throws Exception
+	{
+		verifyElement = new VerifyElementOnWebPage(driver);
+		images= new SplashmathScreenShot(driver);
+		windowTab = new WindowHandling(driver);
+		boolean elementStatus = false;
+		
+		test.log(LogStatus.INFO, "User on Splashmath Landing Page");
+		elementStatus = verifyElement.isElementPresent(footer_Grade2Worksheet);
+		
+		if(elementStatus)
+		{
+			driver.findElement(footer_Grade2Worksheet).click();
+			test.log(LogStatus.INFO, "User clicked on Grade2 Worksheet link");
+			
+			WebDriverWait signUpButton=new WebDriverWait(driver,10);
+			signUpButton.until(ExpectedConditions.elementToBeClickable(Grade2Worksheet_ParentSignUpButton));
+			
+			test.log(LogStatus.INFO, "User on Grade2 Worksheet Page");
+			images.takeScreenshot("Grade2", "Grade2_Worksheet");
+			
+		}
+		else
+		{
+			test.log(LogStatus.INFO, "Grade2 Worksheet link missing or has changed");
+		}
+	}
+	
+	public void clickGrade3MathWorksheetLink() throws Exception
+	{
+		verifyElement = new VerifyElementOnWebPage(driver);
+		images= new SplashmathScreenShot(driver);
+		windowTab = new WindowHandling(driver);
+		boolean elementStatus = false;
+		
+		test.log(LogStatus.INFO, "User on Splashmath Landing Page");
+		elementStatus = verifyElement.isElementPresent(footer_Grade3Worksheet);
+		
+		if(elementStatus)
+		{
+			driver.findElement(footer_Grade3Worksheet).click();
+			test.log(LogStatus.INFO, "User clicked on Grade3 Worksheet link");
+			
+			WebDriverWait signUpButton=new WebDriverWait(driver,10);
+			signUpButton.until(ExpectedConditions.elementToBeClickable(Grade3Worksheet_ParentSignUpButton));
+			
+			test.log(LogStatus.INFO, "User on Grade3 Worksheet Page");
+			images.takeScreenshot("Grade3", "Grade3_Worksheet");
+			
+		}
+		else
+		{
+			test.log(LogStatus.INFO, "Grade3 Worksheet link missing or has changed");
+		}
+	}
+	
+	public void clickGrade4MathWorksheetLink() throws Exception
+	{
+		verifyElement = new VerifyElementOnWebPage(driver);
+		images= new SplashmathScreenShot(driver);
+		windowTab = new WindowHandling(driver);
+		boolean elementStatus = false;
+		
+		test.log(LogStatus.INFO, "User on Splashmath Landing Page");
+		elementStatus = verifyElement.isElementPresent(footer_Grade4Worksheet);
+		
+		if(elementStatus)
+		{
+			driver.findElement(footer_Grade4Worksheet).click();
+			test.log(LogStatus.INFO, "User clicked on Grade4 Worksheet link");
+			
+			WebDriverWait signUpButton=new WebDriverWait(driver,10);
+			signUpButton.until(ExpectedConditions.elementToBeClickable(Grade4Worksheet_ParentSignUpButton));
+			
+			test.log(LogStatus.INFO, "User on Grade4 Worksheet Page");
+			images.takeScreenshot("Grade4", "Grade4_Worksheet");
+			
+		}
+		else
+		{
+			test.log(LogStatus.INFO, "Grade4 Worksheet link missing or has changed");
+		}
+	}
+	
+	public void clickGrade5MathWorksheetLink() throws Exception
+	{
+		verifyElement = new VerifyElementOnWebPage(driver);
+		images= new SplashmathScreenShot(driver);
+		windowTab = new WindowHandling(driver);
+		boolean elementStatus = false;
+		
+		test.log(LogStatus.INFO, "User on Splashmath Landing Page");
+		elementStatus = verifyElement.isElementPresent(footer_Grade5Worksheet);
+		
+		if(elementStatus)
+		{
+			driver.findElement(footer_Grade4Worksheet).click();
+			test.log(LogStatus.INFO, "User clicked on Grade5 Worksheet link");
+			
+			WebDriverWait signUpButton=new WebDriverWait(driver,10);
+			signUpButton.until(ExpectedConditions.elementToBeClickable(Grade5Worksheet_ParentSignUpButton));
+			
+			test.log(LogStatus.INFO, "User on Grade5 Worksheet Page");
+			images.takeScreenshot("Grade5", "Grade5_Worksheet");
+			
+		}
+		else
+		{
+			test.log(LogStatus.INFO, "Grade5 Worksheet link missing or has changed");
+		}
+	}
+	
+	public void clickCommonCoreMathVocabularyLink() throws Exception
+	{
+		verifyElement = new VerifyElementOnWebPage(driver);
+		images= new SplashmathScreenShot(driver);
+		windowTab = new WindowHandling(driver);
+		boolean elementStatus = false;
+		
+		test.log(LogStatus.INFO, "User on Splashmath Landing Page");
+		elementStatus = verifyElement.isElementPresent(footer_CommonCoreMathVocabulary);
+		
+		if(elementStatus)
+		{
+			driver.findElement(footer_CommonCoreMathVocabulary).click();
+			test.log(LogStatus.INFO, "User clicked on CommonCoreMathVocabulary link");
+			
+			WebDriverWait signUpButton=new WebDriverWait(driver,10);
+			signUpButton.until(ExpectedConditions.elementToBeClickable(commonCoreVocabularyPage_Grade1));
+			
+			test.log(LogStatus.INFO, "User on CommonCoreMathVocabulary Page");
+			images.takeScreenshot("CommonCoreMathVocabulary", "CommonCoreMathVocabulary");
+			
+		}
+		else
+		{
+			test.log(LogStatus.INFO, "CommonCore_Math_Vocabulary link missing or has changed");
+		}
+	}
+		
+	public void clickCommonCoreCurriculumLink() throws Exception
+	{
+		verifyElement = new VerifyElementOnWebPage(driver);
+		images= new SplashmathScreenShot(driver);
+		windowTab = new WindowHandling(driver);
+		boolean elementStatus = false;
+		
+		test.log(LogStatus.INFO, "User on Splashmath Landing Page");
+		elementStatus = verifyElement.isElementPresent(footer_CommonCoreMathVocabulary);
+		
+		if(elementStatus)
+		{
+			driver.findElement(footer_CommonCoreMathVocabulary).click();
+			test.log(LogStatus.INFO, "User clicked on CommonCoreCurriculum link");
+			
+			WebDriverWait signUpButton=new WebDriverWait(driver,10);
+			signUpButton.until(ExpectedConditions.elementToBeClickable(commonCoreCurriculumPage_Grade1));
+			
+			test.log(LogStatus.INFO, "User on CommonCoreCurriculum Page");
+			images.takeScreenshot("CommonCoreCurriculum", "CommonCoreCurriculum");		
+		}
+		else
+		{
+			test.log(LogStatus.INFO, "CommonCoreCurriculum link missing or has changed");
+		}
+	}
+	
+	public void clickAboutUsLink() throws Exception
+	{
+		verifyElement = new VerifyElementOnWebPage(driver);
+		images= new SplashmathScreenShot(driver);
+		windowTab = new WindowHandling(driver);
+		boolean elementStatus = false;
+		
+		test.log(LogStatus.INFO, "User on Splashmath Landing Page");
+		elementStatus = verifyElement.isElementPresent(footer_AboutUs);
+		
+		if(elementStatus)
+		{
+			driver.findElement(footer_AboutUs).click();
+			test.log(LogStatus.INFO, "User clicked on AboutUs link");
+			
+			WebDriverWait signUpButton=new WebDriverWait(driver,10);
+			signUpButton.until(ExpectedConditions.elementToBeClickable(aboutUspage_splashmathlink));
+			
+			test.log(LogStatus.INFO, "User on AboutUs Page");
+			images.takeScreenshot("AboutUs", "AboutUs");		
+		}
+		else
+		{
+			test.log(LogStatus.INFO, "AboutUs link missing or has changed");
+		}
+	}
+	
+	public void clickContactUsLink() throws Exception
+	{
+		verifyElement = new VerifyElementOnWebPage(driver);
+		images= new SplashmathScreenShot(driver);
+		windowTab = new WindowHandling(driver);
+		boolean elementStatus = false;
+		
+		test.log(LogStatus.INFO, "User on Splashmath Landing Page");
+		elementStatus = verifyElement.isElementPresent(footer_ContactUs);
+		
+		if(elementStatus)
+		{
+			driver.findElement(footer_ContactUs).click();
+			test.log(LogStatus.INFO, "User clicked on ContactUs link");
+			
+			WebDriverWait signUpButton=new WebDriverWait(driver,10);
+			signUpButton.until(ExpectedConditions.elementToBeClickable(contactUsPage_submitButton));
+			
+			test.log(LogStatus.INFO, "User on ContactUs Page");
+			images.takeScreenshot("AboutUs", "ContactUs");		
+		}
+		else
+		{
+			test.log(LogStatus.INFO, "ContactUs link missing or has changed");
+		}
+	}
+	
+	/*
+	 * private By footer_SplashmathBlog=By.linkText("Splash Math Blog");
+	private By footer_SplashmathReviews=By.linkText("Splash Math Reviews");
+	private By footer_SplashmathApps=By.linkText("Splash Math Apps");
+	private By footer_Affiliates=By.linkText("Affiliates");
+	private By footer_Help=By.linkText("Help");
+	private By footer_customerCare=By.linkText("help@splashmath.com");
+	 */
+	
+	public void clickSplashmathBlogLink() throws Exception
+	{
+		 pagelink = new LinkOnPage(driver,test);
+		verifyElement = new VerifyElementOnWebPage(driver);
+		images= new SplashmathScreenShot(driver);
+		windowTab = new WindowHandling(driver);
+		boolean elementStatus = false;
+		boolean linkStatus =false;
+		
+		test.log(LogStatus.INFO, "User on Splashmath Landing Page");
+		elementStatus = verifyElement.isElementPresent(footer_SplashmathBlog);
+		String urlName= driver.findElement(footer_SplashmathBlog).getAttribute("href");
+		test.log(LogStatus.INFO, "URL name = " +urlName);
+		
+		linkStatus = pagelink.verifyActiveLink(urlName);
+		if(linkStatus)
+		{
+			driver.findElement(footer_SplashmathBlog).click();
+			test.log(LogStatus.INFO, "user clicked on Splashmath Blog");
+		}
+		else
+		{
+			driver.findElement(footer_SplashmathBlog).click();
+			test.log(LogStatus.INFO, "user clicked on Splashmath Blog to see 404 page");
+			test.log(LogStatus.INFO, urlName + " Clicked on broken link");
+		}
+		
+/*		
+		if(elementStatus)
+		{
+			driver.findElement(footer_SplashmathBlog).click();
+			test.log(LogStatus.INFO, "User clicked on SplashmathBlog link");
+			sdadasdasdas
+			WebDriverWait signUpButton=new WebDriverWait(driver,10);
+			signUpButton.until(ExpectedConditions.elementToBeClickable(contactUsPage_submitButton));
+			
+			test.log(LogStatus.INFO, "User on ContactUs Page");
+			images.takeScreenshot("AboutUs", "ContactUs");		
+		}
+		else
+		{
+			test.log(LogStatus.INFO, "ContactUs link missing or has changed");
+		}
+*/
+	}
 }
