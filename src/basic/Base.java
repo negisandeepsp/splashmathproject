@@ -47,7 +47,8 @@ public class Base
 					
 			driver.manage().window().setSize(screenResolution);
 			
-			driver.get("https://staging-1.splashmath.com");
+		//	driver.get("https://staging-1.splashmath.com");
+			driver.get("https://staging-1.splashmath.com/?ab_override_signup_flow=web_subscription_trial_aug_2015:30_day:product_selection_first");
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	

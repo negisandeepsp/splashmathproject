@@ -93,23 +93,6 @@ public class ParentSignUpFlowType
 				//Flow 1 = web_subscription_trial_aug_2015:30_day:product_selection_first	
 				// trial_class_50
 				
-				if(userCurrentFlowSet.equals("web_subscription_trial_aug_2015:30_day:product_selection_first"))
-				{
-					
-				}
-				else if(userCurrentFlowSet.equals("trial_class_50"))
-				{
-					
-				}
-				else if(userCurrentFlowSet.equals("trial_class_100"))
-				{
-					
-				}
-				else
-				{
-					test.log(LogStatus.INFO, "Some other SignUp flow Set for User => " + userCurrentFlowSet);
-				}
-				
 		}
 		
 		else

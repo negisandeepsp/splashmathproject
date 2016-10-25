@@ -27,7 +27,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 			TakesScreenshot photo=(TakesScreenshot)driver;
 			File source = photo.getScreenshotAs(OutputType.FILE);
 			
-			String dest = "./ReportSummary/"+ "ScreenShots/" + FolderName+ "/" + imageName + ".png";
+			String dest = "./ScreenShots/" + FolderName+ "/" + imageName + ".png";
 			File destination = new File(dest);
 			
 			FileUtils.copyFile(source, destination);
