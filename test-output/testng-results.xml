@@ -2,35 +2,35 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="52646" started-at="2016-10-25T11:13:25Z" finished-at="2016-10-25T11:14:18Z">
+  <suite name="Suite" duration-ms="36452" started-at="2016-10-26T12:19:35Z" finished-at="2016-10-26T12:20:11Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="52646" started-at="2016-10-25T11:13:25Z" finished-at="2016-10-25T11:14:18Z">
+    <test name="Test" duration-ms="36452" started-at="2016-10-26T12:19:35Z" finished-at="2016-10-26T12:20:11Z">
       <class name="testCases.UserSignUpFlowType">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testCases.UserSignUpFlowType@139ad8e]" name="beforeSuite" is-config="true" duration-ms="120" started-at="2016-10-25T16:43:25Z" finished-at="2016-10-25T16:43:25Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd]" name="beforeSuite" is-config="true" duration-ms="68" started-at="2016-10-26T17:49:35Z" finished-at="2016-10-26T17:49:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.UserSignUpFlowType@139ad8e]" name="openBrowser" is-config="true" duration-ms="23229" started-at="2016-10-25T16:43:25Z" finished-at="2016-10-25T16:43:48Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd]" name="openBrowser" is-config="true" duration-ms="13816" started-at="2016-10-26T17:49:35Z" finished-at="2016-10-26T17:49:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="verifySignUpFlow()[pri:0, instance:testCases.UserSignUpFlowType@139ad8e]" name="verifySignUpFlow" duration-ms="29178" started-at="2016-10-25T16:43:48Z" finished-at="2016-10-25T16:44:17Z">
+        <test-method status="PASS" signature="verifySignUpFlow()[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd]" name="verifySignUpFlow" duration-ms="22389" started-at="2016-10-26T17:49:49Z" finished-at="2016-10-26T17:50:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySignUpFlow -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.UserSignUpFlowType@139ad8e]" name="afterMethod" is-config="true" duration-ms="227" started-at="2016-10-25T16:44:17Z" finished-at="2016-10-25T16:44:18Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd]" name="afterMethod" is-config="true" duration-ms="226" started-at="2016-10-26T17:50:11Z" finished-at="2016-10-26T17:50:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifySignUpFlow status=SUCCESS method=UserSignUpFlowType.verifySignUpFlow()[pri:0, instance:testCases.UserSignUpFlowType@139ad8e] output={null}]]]>
+                <![CDATA[[TestResult name=verifySignUpFlow status=SUCCESS method=UserSignUpFlowType.verifySignUpFlow()[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testCases.UserSignUpFlowType@139ad8e]" name="afterSuite" is-config="true" duration-ms="0" started-at="2016-10-25T16:44:18Z" finished-at="2016-10-25T16:44:18Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd]" name="afterSuite" is-config="true" duration-ms="0" started-at="2016-10-26T17:50:11Z" finished-at="2016-10-26T17:50:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

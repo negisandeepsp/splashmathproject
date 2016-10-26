@@ -1,8 +1,10 @@
 package pageObjectModel;
 
+import java.awt.Toolkit;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -11,6 +13,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import commonUtility.SplashmathScreenShot;
 import commonUtility.WaitForSometime;
+import commonUtility.WebElementLocationOnPage;
 
 	public class ProductSelectionFirstPage 
 	{
@@ -18,6 +21,7 @@ import commonUtility.WaitForSometime;
 	public ExtentTest test;
 	public SplashmathScreenShot images;
 	public WaitForSometime needWait;
+	public WebElementLocationOnPage pageElement;
 
 	private By productPageHeading = By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]/div/h5/span");
 	private By subHeading = By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]/div/p/span");
@@ -30,6 +34,7 @@ import commonUtility.WaitForSometime;
 	private By chargeAfterTrialPeriod=By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]/div/ul/li");
 // Select Monthly PLan	
 	private By selectPlan=By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]/div/ul/li[1]/div/div/div/div/div[6]/a[2]");
+	private By productContainer=By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]");
 	//*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[1]/div/div/div/div/div[6]/a[1]
 	//*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[1]/div/div/div/div/div[6]/a[2]
 /*
@@ -79,13 +84,30 @@ import commonUtility.WaitForSometime;
 		
 		int productCount=0;
 		needWait = new WaitForSometime();
+		pageElement = new WebElementLocationOnPage(driver, test);
+		
+	//	WebElement productContainer = driver.findElement(By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]"));
+	//	test.log(LogStatus.INFO, "Product container Height = " +productContainer.getCssValue(arg0) );
+		
 		
 		images= new SplashmathScreenShot(driver);
 		List<WebElement> allProducts = driver.findElements(products);
 		needWait.doWaitForSometime();
 		
 		test.log(LogStatus.INFO, "Product Page Heading ======================== "+ driver.findElement(productPageHeading).getText());
+		pageElement.getElementLocation(productPageHeading);
+		test.log(LogStatus.INFO, "Heading Font-size = "+driver.findElement(productPageHeading).getCssValue("font-size").trim() + " Font-Color = "+driver.findElement(productPageHeading).getCssValue("color").trim()+" Font Family = "+driver.findElement(productPageHeading).getCssValue("font-family")+ " Background Color = " +driver.findElement(productPageHeading).getCssValue("background-color"));
+	/*	test.log(LogStatus.INFO, "Heading Font-size = "+driver.findElement(productPageHeading).getCssValue("font-size").trim());
+		test.log(LogStatus.INFO, "Heading Font-Color = "+driver.findElement(productPageHeading).getCssValue("color").trim());
+		test.log(LogStatus.INFO, "Heading Font-Family = "+driver.findElement(productPageHeading).getCssValue("font-family"));
+		test.log(LogStatus.INFO, "Heading Background Color ="+driver.findElement(productPageHeading).getCssValue("background-color"));
+	 */	
 		test.log(LogStatus.INFO, "Product Page SubHeading ======================== "+ driver.findElement(subHeading).getText());
+		test.log(LogStatus.INFO, "SubHeading Font-size = "+driver.findElement(subHeading).getCssValue("font-size").trim() + " Font-Color = "+driver.findElement(subHeading).getCssValue("color").trim()+" Font Family = "+driver.findElement(subHeading).getCssValue("font-family")+ " Background Color = " +driver.findElement(subHeading).getCssValue("background-color"));
+
+		
+		pageElement.getElementLocation(subHeading);
+		
 		for(WebElement eachProduct:allProducts)
 		 {
 			productCount++;
@@ -109,6 +131,8 @@ import commonUtility.WaitForSometime;
 				pName=eachProduct.findElement(By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]/div/ul/li[" + productCount + "]/div/div/div/header/h1"));
 				prodName=pName.getText();
 				test.log(LogStatus.INFO, "Product Plan ==================================================== " +prodName);
+		//		pageElement.getElementLocation(pName);
+
 				
 				pDescription=eachProduct.findElement(By.xpath("//*[@class='products-container-list-wrap clearfix product-container-lists pull-left']/li[" +productCount+"]/div/div/div/div/div[2]/span"));
 				productDescription=pDescription.getText();
