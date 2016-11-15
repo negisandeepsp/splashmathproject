@@ -1,36 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="36452" started-at="2016-10-26T12:19:35Z" finished-at="2016-10-26T12:20:11Z">
+  <suite name="Suite" duration-ms="34610" started-at="2016-11-15T11:56:40Z" finished-at="2016-11-15T11:57:15Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="36452" started-at="2016-10-26T12:19:35Z" finished-at="2016-10-26T12:20:11Z">
+    <test name="Test" duration-ms="34610" started-at="2016-11-15T11:56:40Z" finished-at="2016-11-15T11:57:15Z">
       <class name="testCases.UserSignUpFlowType">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd]" name="beforeSuite" is-config="true" duration-ms="68" started-at="2016-10-26T17:49:35Z" finished-at="2016-10-26T17:49:35Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd]" name="beforeSuite" is-config="true" duration-ms="82" started-at="2016-11-15T17:26:40Z" finished-at="2016-11-15T17:26:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd]" name="openBrowser" is-config="true" duration-ms="13816" started-at="2016-10-26T17:49:35Z" finished-at="2016-10-26T17:49:49Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd]" name="openBrowser" is-config="true" duration-ms="13948" started-at="2016-11-15T17:26:40Z" finished-at="2016-11-15T17:26:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="verifySignUpFlow()[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd]" name="verifySignUpFlow" duration-ms="22389" started-at="2016-10-26T17:49:49Z" finished-at="2016-10-26T17:50:11Z">
+        <test-method status="FAIL" signature="verifySignUpFlow()[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd]" name="verifySignUpFlow" duration-ms="18304" started-at="2016-11-15T17:26:54Z" finished-at="2016-11-15T17:27:13Z">
+          <exception class="org.openqa.selenium.support.ui.UnexpectedTagNameException">
+            <message>
+              <![CDATA[Element should have been "select" but was "a"
+Build info: version: '3.0.0-beta4', revision: '3169782', time: '2016-09-29 10:29:23 -0700'
+System info: host: 'DTAL14', ip: '192.168.1.66', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been "select" but was "a"
+Build info: version: '3.0.0-beta4', revision: '3169782', time: '2016-09-29 10:29:23 -0700'
+System info: host: 'DTAL14', ip: '192.168.1.66', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_102'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.<init>(Select.java:47)
+	at pageObjectModel.FromProductPageToCreditCardPage.toCreditCardPage(FromProductPageToCreditCardPage.java:93)
+	at pageObjectModel.ProductSelectionFirstPage.productAvialableForUser(ProductSelectionFirstPage.java:196)
+	at testCases.UserSignUpFlowType.verifySignUpFlow(UserSignUpFlowType.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.support.ui.UnexpectedTagNameException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySignUpFlow -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd]" name="afterMethod" is-config="true" duration-ms="226" started-at="2016-10-26T17:50:11Z" finished-at="2016-10-26T17:50:11Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd]" name="afterMethod" is-config="true" duration-ms="2326" started-at="2016-11-15T17:27:13Z" finished-at="2016-11-15T17:27:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifySignUpFlow status=SUCCESS method=UserSignUpFlowType.verifySignUpFlow()[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd] output={null}]]]>
+                <![CDATA[[TestResult name=verifySignUpFlow status=FAILURE method=UserSignUpFlowType.verifySignUpFlow()[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd]" name="afterSuite" is-config="true" duration-ms="0" started-at="2016-10-26T17:50:11Z" finished-at="2016-10-26T17:50:11Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testCases.UserSignUpFlowType@10f6bfd]" name="afterSuite" is-config="true" duration-ms="0" started-at="2016-11-15T17:27:15Z" finished-at="2016-11-15T17:27:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

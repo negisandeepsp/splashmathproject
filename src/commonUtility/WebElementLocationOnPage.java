@@ -28,19 +28,17 @@ public class WebElementLocationOnPage
 		int broswerHeight = (int) toolkit.getScreenSize().getHeight();
 		Dimension screenResolution = new Dimension(browserWidth, broswerHeight);
 		
-		test.log(LogStatus.INFO, "Browser Height = "+ broswerHeight);
-		test.log(LogStatus.INFO, "Browser Width = "+ browserWidth);
+		test.log(LogStatus.INFO, "Browser Height = "+ broswerHeight + " Browser Width = "+ browserWidth);
 // to get Element Co-ordinate on Web Page		
 	    Point point =	driver.findElement(elementName).getLocation();
 		int xCordinate = point.getX();
-		test.log(LogStatus.INFO, "X-Cordinate on Page = "+ xCordinate);	
-		int yCordinate = point.getY();
-		test.log(LogStatus.INFO, "Y-Cordinate on Page = "+ yCordinate);
+		int yCordinate = point.getY(); 
+		test.log(LogStatus.INFO, "X-Position = "+ xCordinate + " Y-Position = "+ yCordinate);	
  // To get element Height and Width on Page		
 		int elementHeight=driver.findElement(elementName).getSize().getHeight();
-		test.log(LogStatus.INFO, "Height on Page = "+ elementHeight);
 		int elementWidth=driver.findElement(elementName).getSize().getWidth();
-		test.log(LogStatus.INFO, "Width on Page = "+ elementWidth);
+		test.log(LogStatus.INFO, "Element Height on Page = "+ elementHeight + "Width on Page = "+ elementWidth);
+		
 		
 		
 	}

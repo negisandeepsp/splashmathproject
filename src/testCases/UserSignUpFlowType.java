@@ -19,7 +19,7 @@ public class UserSignUpFlowType extends Base
 	public ProductSelectionFirstPage productpage;
 	
 	@Test
-	public void verifySignUpFlow()
+	public void verifySignUpFlow() throws InterruptedException
 	{
 		test = extent.startTest("Verify User SignUp Flow");
 		parentSignUp = new ParentSignUpFlowType(driver, test);
