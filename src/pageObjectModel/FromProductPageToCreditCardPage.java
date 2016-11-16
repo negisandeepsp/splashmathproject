@@ -2,6 +2,7 @@ package pageObjectModel;
 
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -19,14 +20,6 @@ import commonUtility.WebElementLocationOnPage;
 
 public class FromProductPageToCreditCardPage 
 {
-	
-	/*
-	 * @FindBy(how=How.NAME, using="username")
-	   @CacheLookup
-	   private WebElement user_name;
-	   //*[@id="subscription-welcome-flow"]/div[3]/div/div[2]/div/div[1]/form/h5/span
-	    * //*[@id="subscription-welcome-flow"]/div[3]/div/div[2]/div/div[1]/form/p
-	 */
 	
 		@FindBy(xpath ="//*[@class='header-text']")
 		@CacheLookup
@@ -48,17 +41,25 @@ public class FromProductPageToCreditCardPage
 		@CacheLookup
 		WebElement cardSecurityCode;
 		
-		@FindBy(xpath="//*[@class='date-field js-date-field month dropdown']/a")
+		@FindBy(xpath="//*[@id='subscription-welcome-flow']/div[3]/div/div[2]/div/div[1]/form/div[3]/div/div/div[1]/a")
 		@CacheLookup
-		WebElement expirationMonth;
+		WebElement selectExpirationMonthDropDown;
 		
-		@FindBy(xpath="//*[@class='date-field js-date-field year dropdown']/a")
+		@FindBy(xpath="//*[@id='subscription-welcome-flow']/div[3]/div/div[2]/div/div[1]/form/div[3]/div/div/div[1]/ul/li[5]/a")
 		@CacheLookup
-		WebElement expirationYear;
+		WebElement selectExpirationMonth;
+		
+		@FindBy(xpath="//*[@id='subscription-welcome-flow']/div[3]/div/div[2]/div/div[1]/form/div[3]/div/div/div[2]/a")
+		@CacheLookup
+		WebElement selectExpirationYearDropDown;
+		
+		@FindBy(xpath="//*[@id='subscription-welcome-flow']/div[3]/div/div[2]/div/div[1]/form/div[3]/div/div/div[2]/ul/li[4]/a")
+		@CacheLookup
+		WebElement selectExpirationYear;
 		
 		@FindBy(name="commit")
 		@CacheLookup
-		WebElement selectFreeMonth;
+		WebElement userSubmitCard;
 		
 		public WebDriver driver;
 		public ExtentTest test;
@@ -73,7 +74,7 @@ public class FromProductPageToCreditCardPage
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void toCreditCardPage()
+	public void toCreditCardPage() throws InterruptedException
 	{
 		images = new SplashmathScreenShot(driver);
 		
@@ -87,25 +88,33 @@ public class FromProductPageToCreditCardPage
 		String userCreditCardSubBoxInfo = userCreditCardSubInfo.getText();
 		test.log(LogStatus.INFO, "Credit Card Sub Heading = "+ userCreditCardSubBoxInfo);
 		
-		userCardNumber.sendKeys("4242424242424242");
+		userCardNumber.sendKeys("4242");
+		userCardNumber.sendKeys("4242");
+		userCardNumber.sendKeys("4242");
+		userCardNumber.sendKeys("4242");
+		
 		test.log(LogStatus.INFO, "User Enters Credit Card Number");
 		
-		Select selectMonth= new Select(expirationMonth);
-		selectMonth.selectByVisibleText("10");
+		selectExpirationMonthDropDown.click();
+		selectExpirationMonth.click();
+		
+//		Select selectMonth= new Select(expirationMonth);
+//		selectMonth.selectByVisibleText("5");
+		selectExpirationYearDropDown.click();
+		selectExpirationYear.click();
 		test.log(LogStatus.INFO, "User Selects Card Expiry Month");
 		
-		Select selectYear= new Select(expirationYear);
-		selectYear.selectByVisibleText("2016");
+//		Select selectYear= new Select(expirationYear);
+//		selectMonth.selectByVisibleText("2018");
 		test.log(LogStatus.INFO, "User Selects Card Expiry Year");
 		
 		cardSecurityCode.sendKeys("123");
 		test.log(LogStatus.INFO, "User Enters Card Security Code");
+		Thread.sleep(3000);
 		
-		selectFreeMonth.click();
-		test.log(LogStatus.INFO, "User Enters Card Security Code");
-		
-		images.takeScreenshot("UserCreditCardPage", "CreditCardPage");
-		
+		images.takeScreenshot("UserCreditCardPage", "CreditCardPage_AfterProductSelectionFirst");
+		userSubmitCard.click();
+		test.log(LogStatus.INFO, "User Clicked Submit Card");	
 		
 	}
 	

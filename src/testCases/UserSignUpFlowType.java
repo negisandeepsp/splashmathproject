@@ -1,7 +1,11 @@
 package testCases;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -42,13 +46,51 @@ public class UserSignUpFlowType extends Base
 			test.log(LogStatus.INFO, "Product Selection first page");
 			//web_subscription_trial_aug_2015:30_day:product_selection_first
 			productpage.productAvialableForUser();
+			WebDriverWait childLoginButton = new WebDriverWait(driver,30);
+			childLoginButton.until(ExpectedConditions.presenceOfElementLocated(By.id("launch_child_dashboard_id")));
+			Assert.assertEquals((driver.getTitle()), "Parent Dashboard - Splash Math");
+			test.log(LogStatus.INFO, "User on Parent Dashboard");
+			JavascriptExecutor js = (JavascriptExecutor) driver; 
+			test.log(LogStatus.INFO, " Is Tour Pop Up Visible on Parent Dashboard After SignUp => " + js.executeScript("return REGISTRY.tourShown;").toString()) ;
+	//		test.log(LogStatus.INFO, " Is EngagementChanges Enabled on Parent Dashboard After SignUp => " + js.executeScript("return REGISTRY.engagementChanges;").toString()) ;
+	//		test.log(LogStatus.INFO, " Is WeeklyGoal Enabled on Parent Dashboard After SignUp => " + js.executeScript("return REGISTRY.weeklyGoalsEnabled;").toString()) ;
+			test.log(LogStatus.INFO, " UserSignUp Flow Set => " + js.executeScript("return REGISTRY.currentUser.signupFlow;").toString()) ;
+		}
+		
+		else if(userFlowType.equals("trial_class_25"))
+		{
+			WebDriverWait childLoginButton = new WebDriverWait(driver,30);
+			childLoginButton.until(ExpectedConditions.presenceOfElementLocated(By.id("launch_child_dashboard_id")));
+			Assert.assertEquals((driver.getTitle()), "Parent Dashboard - Splash Math");
 			
+			test.log(LogStatus.INFO, "User on Parent Dashboard");
+			JavascriptExecutor js = (JavascriptExecutor) driver; 
+			test.log(LogStatus.INFO, " Is Tour Pop Up Visible on Parent Dashboard After SignUp => " + js.executeScript("return REGISTRY.tourShown;").toString()) ;
+		//	test.log(LogStatus.INFO, " Is EngagementChanges Enabled on Parent Dashboard After SignUp => " + js.executeScript("return REGISTRY.engagementChanges;").toString()) ;
+		//	test.log(LogStatus.INFO, " Is WeeklyGoal Enabled on Parent Dashboard After SignUp => " + js.executeScript("return REGISTRY.weeklyGoalsEnabled;").toString()) ;
+			test.log(LogStatus.INFO, " UserSignUp Flow Set => " + js.executeScript("return REGISTRY.currentUser.signupFlow;").toString()) ;
+		}
+		
+		else if(userFlowType.equals("trial_class_50"))
+		{
+			WebDriverWait childLoginButton = new WebDriverWait(driver,30);
+			childLoginButton.until(ExpectedConditions.presenceOfElementLocated(By.id("launch_child_dashboard_id")));
+			Assert.assertEquals((driver.getTitle()), "Parent Dashboard - Splash Math");
+			JavascriptExecutor js = (JavascriptExecutor) driver; 
+			test.log(LogStatus.INFO, " Is Tour Pop Up Visible on Parent Dashboard After SignUp => " + js.executeScript("return REGISTRY.tourShown;").toString()) ;
+	//		test.log(LogStatus.INFO, " Is EngagementChanges Enabled on Parent Dashboard After SignUp => " + js.executeScript("return REGISTRY.engagementChanges;").toString()) ;
+	//		test.log(LogStatus.INFO, " Is WeeklyGoal Enabled on Parent Dashboard After SignUp => " + js.executeScript("return REGISTRY.weeklyGoalsEnabled;").toString()) ;
+			test.log(LogStatus.INFO, " UserSignUp Flow Set => " + js.executeScript("return REGISTRY.currentUser.signupFlow;").toString()) ;
 		}
 		
 		else
 		{
-			test.log(LogStatus.INFO, "Trial Class Flow user");
-			// trial_class_50
+			JavascriptExecutor js = (JavascriptExecutor) driver; 
+			test.log(LogStatus.INFO, " Is Tour Pop Up Visible on Parent Dashboard After SignUp => " + js.executeScript("return REGISTRY.tourShown;").toString()) ;
+	//		test.log(LogStatus.INFO, " Is EngagementChanges Enabled on Parent Dashboard After SignUp => " + js.executeScript("return REGISTRY.engagementChanges;").toString()) ;
+	//		test.log(LogStatus.INFO, " Is WeeklyGoal Enabled on Parent Dashboard After SignUp => " + js.executeScript("return REGISTRY.weeklyGoalsEnabled;").toString()) ;
+			test.log(LogStatus.INFO, " UserSignUp Flow Set => " + js.executeScript("return REGISTRY.currentUser.signupFlow;").toString()) ;
+			test.log(LogStatus.INFO, "UNknown Flow user");
 		}
 		
 		
