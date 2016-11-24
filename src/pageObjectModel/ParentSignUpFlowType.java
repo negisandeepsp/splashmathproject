@@ -89,9 +89,6 @@ public class ParentSignUpFlowType
 				test.log(LogStatus.INFO, " UserSignUp Flow Set => " + js.executeScript("return REGISTRY.currentUser.signupFlow;").toString()) ;
 				String userCurrentFlowSet = js.executeScript("return REGISTRY.currentUser.signupFlow;").toString();
 				System.out.println(userCurrentFlowSet);
-		
-				//Flow 1 = web_subscription_trial_aug_2015:30_day:product_selection_first	
-				// trial_class_50
 				
 		}
 		

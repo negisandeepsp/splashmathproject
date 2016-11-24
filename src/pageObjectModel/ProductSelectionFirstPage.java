@@ -39,51 +39,13 @@ import commonUtility.WebElementLocationOnPage;
 // Select Monthly PLan	
 	private By selectPlan=By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]/div/ul/li[1]/div/div/div/div/div[6]/a[1]");
 	private By productContainer=By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]");
-	
-	//*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[1]/div/div/div/div/div[6]/a[1]
-	//*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[1]/div/div/div/div/div[6]/a[2]
-/*
-	// Header Data
-	  //*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[1]/div/div/div/header/h1
-	  //*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[2]/div/div/div[2]/header/h1
-	  //*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[3]/div/div/div/header/h1
-	// Body Data
 
-	BodyTitle
-
-	//*[@class='products-container-list-wrap clearfix product-container-lists pull-left']/li[1]/div/div/div/div/div[2]/span
-	* //*[@class='products-container-list-wrap clearfix product-container-lists pull-left']/li[2]/div/div/div/div/div[2]/span
-	* //*[@class='products-container-list-wrap clearfix product-container-lists pull-left']/li[3]/div/div/div/div/div[2]/span
-
-	Body > Monthly Charge
-	//*[@class='products-container-list-wrap clearfix product-container-lists pull-left']/li[1]/div/div/div/div/div[3]
-	//*[@class='products-container-list-wrap clearfix product-container-lists pull-left']/li[2]/div/div/div/div/div[3]
-	//*[@class='products-container-list-wrap clearfix product-container-lists pull-left']/li[3]/div/div/div/div/div[3]
-
-	Body > Yearly Charge
-	//*[@class='products-container-list-wrap clearfix product-container-lists pull-left']/li[1]/div/div/div/div/div[4]
-	//*[@class='products-container-list-wrap clearfix product-container-lists pull-left']/li[2]/div/div/div/div/div[4]
-	//*[@class='products-container-list-wrap clearfix product-container-lists pull-left']/li[3]/div/div/div/div/div[4]
-	Body > Charged After trial
-	//*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[1]/div/div/div/div/div[5]
-	//*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[2]/div/div/div/div/div[5]
-	//*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[3]/div/div/div/div/div[5]
-
-	 Product > Select Plan button
-	//*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[1]/div/div/div/div/div[6]/a
-	* //*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[2]/div/div/div/div/div[6]/a
-	* //*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[3]/div/div/div/div/div[6]/a
-	     */
 	public ProductSelectionFirstPage(WebDriver driver, ExtentTest test)
 	{
 	this.driver=driver;
 	this.test=test;
 	}
-		/*
-		 //*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[1]/div/div/div/header/h1
-		  //*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[2]/div/div/div[2]/header/h1
-		  //*[@id="subscription-welcome-flow"]/div[3]/div[1]/div/ul/li[3]/div/div/div/header/h1
-		*/
+		
 	public void productAvialableForUser() throws InterruptedException
 	{
 		
@@ -92,27 +54,11 @@ import commonUtility.WebElementLocationOnPage;
 		pageElement = new WebElementLocationOnPage(driver, test);
 		fromProductFirstPage = new FromProductPageToCreditCardPage(driver, test);
 		
-	//	WebElement productContainer = driver.findElement(By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]"));
-	//	test.log(LogStatus.INFO, "Product container Height = " +productContainer.getCssValue(arg0) );
-		
-		
 		images= new SplashmathScreenShot(driver);
 		List<WebElement> allProducts = driver.findElements(products);
 		test.log(LogStatus.INFO, "Product Page Heading ========================> "+ driver.findElement(productPageHeading).getText());
-   
-/*  To Call WebElementLocation class
- * 	    pageElement.getElementLocation(productPageHeading);
-		test.log(LogStatus.INFO, "Heading Font-size = "+driver.findElement(productPageHeading).getCssValue("font-size").trim() + " Font-Color = "+driver.findElement(productPageHeading).getCssValue("color").trim()+" Font Family = "+driver.findElement(productPageHeading).getCssValue("font-family")+ " Background Color = " +driver.findElement(productPageHeading).getCssValue("background-color"));
-		test.log(LogStatus.INFO, "Heading Font-size = "+driver.findElement(productPageHeading).getCssValue("font-size").trim());
-		test.log(LogStatus.INFO, "Heading Font-Color = "+driver.findElement(productPageHeading).getCssValue("color").trim());
-		test.log(LogStatus.INFO, "Heading Font-Family = "+driver.findElement(productPageHeading).getCssValue("font-family"));
-		test.log(LogStatus.INFO, "Heading Background Color ="+driver.findElement(productPageHeading).getCssValue("background-color"));
-	
-		test.log(LogStatus.INFO, "Product Page SubHeading ========================> "+ driver.findElement(subHeading).getText());
-		test.log(LogStatus.INFO, "SubHeading Font-size = "+driver.findElement(subHeading).getCssValue("font-size").trim() + " Font-Color = "+driver.findElement(subHeading).getCssValue("color").trim()+" Font Family = "+driver.findElement(subHeading).getCssValue("font-family")+ " Background Color = " +driver.findElement(subHeading).getCssValue("background-color"));
- */	
 		
-		pageElement.getElementLocation(subHeading);
+	//	pageElement.getElementLocation(subHeading);
 		
 		for(WebElement eachProduct:allProducts)
 		 {
@@ -129,9 +75,7 @@ import commonUtility.WebElementLocationOnPage;
 			String monthlyCharge=" ";
 			String yearlyChargee=" ";
 			String chargeAfterTrial=" ";
-			
-			// //*[@id='subscription-welcome-flow']/div[3]/div[1]/div/ul/li[1]/div/div/div/div/div[6]/a[1]
-			
+				
 			if(productCount!=2)
 			 {	
 			 	pName=eachProduct.findElement(By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]/div/ul/li[" + productCount + "]/div/div/div/header/h1"));
@@ -153,10 +97,6 @@ import commonUtility.WebElementLocationOnPage;
 				cAfterTrial = eachProduct.findElement(By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]/div/ul/li["+productCount+"]/div/div/div/div/div[5]"));
 				chargeAfterTrial =cAfterTrial.getText();
 				test.log(LogStatus.INFO, "User will be Charged = " +chargeAfterTrial);
-	// User clicks on Product	
-	//			eachProduct.findElement(By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]/div/ul/li[" + productCount+"]/div/div/div/div/div[6]/a[2]")).click();
-				
-	// Need to Call Credit Card Page now
 				
 			 }
 
@@ -182,23 +122,15 @@ import commonUtility.WebElementLocationOnPage;
 				cAfterTrial = eachProduct.findElement(By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]/div/ul/li["+productCount+"]/div/div/div/div/div[5]"));
 				chargeAfterTrial =cAfterTrial.getText();
 				test.log(LogStatus.INFO, "User will be Charged = " +chargeAfterTrial);
-				
-	//			eachProduct.findElement(By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]/div/ul/li["+ productCount+"]/div/div/div/div/div[6]/a[1]")).click();
-					
+								
 		 }
 			
 		 }
 				test.log(LogStatus.INFO, "Total Product Shown on Product Page = " +productCount);
-				images.takeScreenshot("ProductPageAfterSignUp", "ProductFirstPage");
+				images.takeScreenshot("ProductPageAfterSignUp", "ProductPageFirst_Flow");
 			
 				driver.findElement(By.xpath("//*[@id='subscription-welcome-flow']/div[3]/div[1]/div/ul/li[1]/div/div/div/div/div[6]/a[2]")).click();
 				Thread.sleep(2000);
 				fromProductFirstPage.toCreditCardPage();
-				
-
-		
-			// https://staging-1.splashmath.com/?ab_override_signup_flow=web_subscription_trial_aug_2015:30_day:product_selection_first
-
-
 	}
 	}

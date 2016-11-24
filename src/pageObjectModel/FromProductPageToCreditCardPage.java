@@ -97,22 +97,18 @@ public class FromProductPageToCreditCardPage
 		
 		selectExpirationMonthDropDown.click();
 		selectExpirationMonth.click();
-		
-//		Select selectMonth= new Select(expirationMonth);
-//		selectMonth.selectByVisibleText("5");
+
 		selectExpirationYearDropDown.click();
 		selectExpirationYear.click();
 		test.log(LogStatus.INFO, "User Selects Card Expiry Month");
-		
-//		Select selectYear= new Select(expirationYear);
-//		selectMonth.selectByVisibleText("2018");
+
 		test.log(LogStatus.INFO, "User Selects Card Expiry Year");
 		
 		cardSecurityCode.sendKeys("123");
 		test.log(LogStatus.INFO, "User Enters Card Security Code");
 		Thread.sleep(3000);
 		
-		images.takeScreenshot("UserCreditCardPage", "CreditCardPage_AfterProductSelectionFirst");
+		images.takeScreenshot("UserCreditCardPage", "CreditCardPage_AfterProductFirst");
 		userSubmitCard.click();
 		test.log(LogStatus.INFO, "User Clicked Submit Card");	
 		
