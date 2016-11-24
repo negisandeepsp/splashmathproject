@@ -43,6 +43,26 @@ public class ProblemTypeChoices
 	@FindBy(xpath="//*[@id='sky-cont-container']/div[1]/div[1]/div[2]/div[2]/div/div[4]")
 	WebElement optionBirdFour;
 	
+	@FindBy(xpath="//*[@id='sky-cont-container']/div[1]/div[1]/div[2]/div[3]/div/div[1]")
+	WebElement optionSnailOne;
+	
+	@FindBy(xpath="//*[@id='sky-cont-container']/div[1]/div[1]/div[2]/div[3]/div/div[2]")
+	WebElement optionSnailTwo;
+	
+	@FindBy(xpath="//*[@id='sky-cont-container']/div[1]/div[1]/div[2]/div[3]/div/div[3]")
+	WebElement optionSnailThree;
+	
+	@FindBy(xpath="//*[@id='sky-cont-container']/div[1]/div[1]/div[2]/div[3]/div/div[4]")
+	WebElement optionSnailFour;
+	/*		
+	$x("//*[@id='sky-cont-container']/div[1]/div[1]/div[2]/div[3]/div/div[1]")
+
+	$x("//*[@id='sky-cont-container']/div[1]/div[1]/div[2]/div[3]/div/div[2]")
+	
+	$x("//*[@id='sky-cont-container']/div[1]/div[1]/div[2]/div[3]/div/div[3]")
+	
+	$x("//*[@id='sky-cont-container']/div[1]/div[1]/div[2]/div[3]/div/div[4]")
+*/
 	public ProblemTypeChoices(WebDriver driver , ExtentTest test)
 	{
 		this.driver= driver;
@@ -66,7 +86,17 @@ public class ProblemTypeChoices
 		// btn-choice-table pt-choices    num-choices-4 per-row-4  green-choices   => 4 fish in a row
 		// btn-choice-table pt-choices    num-choices-4 per-row-2  orange-choices  => 2 * 2 flat fish
 		// btn-choice-table pt-choices   centered num-choices-4 per-row-2  green-choices => 2 * 2 Fish on centre of screen
-			
+	
+			//	btn-choice-table pt-choices    num-choices-4 per-row-2  blue-choices ....xpath need to be set differently
+	/*		
+		$x("//*[@id='sky-cont-container']/div[1]/div[1]/div[2]/div[3]/div/div[1]")
+
+		$x("//*[@id='sky-cont-container']/div[1]/div[1]/div[2]/div[3]/div/div[2]")
+		
+		$x("//*[@id='sky-cont-container']/div[1]/div[1]/div[2]/div[3]/div/div[3]")
+		
+		$x("//*[@id='sky-cont-container']/div[1]/div[1]/div[2]/div[3]/div/div[4]")
+	*/
 			if(choiceVisibleOnScreen.contains("num-choices-4 per-row-4"))
 			{
 				System.out.println("4 fish in a row");
@@ -101,7 +131,7 @@ public class ProblemTypeChoices
 				
 			}
 	
-			else if(choiceVisibleOnScreen.contains("num-choices-4 per-row-2"))
+			else if(choiceVisibleOnScreen.contains("orange-choices"))
 			{
 				System.out.println("2*2 fish in a row");
 				if (answerOption.equals("0"))
@@ -126,6 +156,36 @@ public class ProblemTypeChoices
 			 	else
 			 	{
 			 		optionFishFour.click();
+			 		images.takeScreenshot("ProblemType_Choice", "Question "+i+")");
+			 		needWait.doWaitForSometime();
+			 	}
+			}
+			
+			else if(choiceVisibleOnScreen.contains("blue-choices"))
+			{
+				System.out.println("2*2 fish in a row");
+				if (answerOption.equals("0"))
+			 	{
+					optionSnailOne.click();
+					images.takeScreenshot("ProblemType_Choice", "Question "+i+")");
+					needWait.doWaitForSometime();
+			 	}
+			 	else if (answerOption.equals("1"))
+			 	{
+			 		optionSnailTwo.click();
+			 		images.takeScreenshot("ProblemType_Choice", "Question "+i+")");
+			 		needWait.doWaitForSometime();
+			 		
+			 	}
+			 	else if (answerOption.equals("2"))
+			 	{
+			 		optionSnailThree.click();
+			 		images.takeScreenshot("ProblemType_Choice", "Question "+i+")");
+			 		needWait.doWaitForSometime();
+			 	}
+			 	else
+			 	{
+			 		optionSnailFour.click();
 			 		images.takeScreenshot("ProblemType_Choice", "Question "+i+")");
 			 		needWait.doWaitForSometime();
 			 	}
